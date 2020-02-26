@@ -1,18 +1,19 @@
 package org.clulab.reach.focusedreading.reinforcement_learning.policies
 
 import breeze.linalg.DenseVector
+import org.apache.http.impl.client.{CloseableHttpClient, HttpClients}
+import org.clulab.reach.focusedreading.HttpUtils
 
 import collection.mutable
 import org.clulab.reach.focusedreading.reinforcement_learning.Actions
 import org.clulab.reach.focusedreading.reinforcement_learning.states.State
-import org.json4s.JsonAST.JObject
+import org.json4s.JsonAST.{JArray, JField, JInt, JObject, JString}
+import org.json4s.native.JsonMethods._
+import org.json4s.JsonDSL._
 import org.json4s._
 import org.json4s.native.JsonMethods._
 import org.json4s.JsonDSL._
-import org.json4s.JsonAST.JObject
-import org.json4s._
-import org.json4s.native.JsonMethods._
-import org.json4s.JsonDSL._
+
 import scala.language.implicitConversions
 
 /**
@@ -165,5 +166,65 @@ class LinearApproximationValues(val coefficientsExplore:mutable.HashMap[String, 
     val keysExploit = coefficientsExploit.keySet.toSeq.sorted
     val valsExploit = keysExploit map coefficientsExploit
     coefficientMemoryExploit += DenseVector(valsExploit.toArray)
+  }
+}
+
+class ProxyValues(url:String) extends Values{
+  private implicit val httpClient: CloseableHttpClient = HttpClients.createDefault
+
+  override def apply(key: (State, Actions.Value)): Double = {
+    val (state, action) = key
+
+    val payload =
+      compact{
+        render{
+          state.toFeatures
+        }
+      }
+
+    val response = HttpUtils.httpPut("select_action", payload)
+
+    val values =
+      for{
+        JArray(vs) <- parse(response)
+        JDouble(v) <- vs
+      } yield v
+
+    val actionIx = action.id
+    values(actionIx)
+  }
+
+  override def tdUpdate(current: (State, Actions.Value), next: (State, Actions.Value), reward: Double, rate: Double, decay: Double): Boolean = {
+    val (state, action) = current
+    val (nextState, nextAction) = next
+
+    val payload =
+      compact{
+        render{
+
+          ("state" -> state.toFeatures) ~
+          ("action" -> action.id) ~
+          ("reward" -> reward) ~
+          ("next_state" -> nextState.toFeatures) ~
+          ("next_action" -> nextAction.id) ~
+          ("rate" -> rate) ~
+          ("decay" -> decay)
+
+        }
+      }
+
+    val response = HttpUtils.httpPut("td_update", payload)
+
+    val changed =
+      for{
+        JBool(c) <- parse(response)
+      } yield c
+
+    changed.head
+  }
+
+  override def toJson: JObject = {
+    ("type" -> "proxy") ~
+      ("model_name" -> "CHANGEME") // TODO change me
   }
 }

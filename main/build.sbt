@@ -25,5 +25,6 @@ libraryDependencies ++= Seq(
   "org.scalanlp" %% "breeze" % "0.13",
   "org.scalanlp" %% "breeze-natives" % "0.13",
   "org.scalanlp" %% "breeze-viz" % "0.13",
-  "org.jfree" % "jfreechart" % "1.0.19"
+  "org.jfree" % "jfreechart" % "1.0.19",
+  "org.apache.httpcomponents" % "httpclient" % "4.5.9"
 )
