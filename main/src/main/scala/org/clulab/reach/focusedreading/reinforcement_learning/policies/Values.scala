@@ -1,6 +1,8 @@
 package org.clulab.reach.focusedreading.reinforcement_learning.policies
 
 import breeze.linalg.DenseVector
+import com.typesafe.scalalogging.LazyLogging
+import org.apache.http.client.methods.{HttpGet, HttpPost}
 import org.apache.http.impl.client.{CloseableHttpClient, HttpClients}
 import org.clulab.reach.focusedreading.HttpUtils
 
@@ -14,7 +16,9 @@ import org.json4s._
 import org.json4s.native.JsonMethods._
 import org.json4s.JsonDSL._
 
+import scala.io.Source
 import scala.language.implicitConversions
+import scala.util.{Failure, Success, Try}
 
 /**
   * Created by enrique on 26/03/17.
@@ -169,8 +173,18 @@ class LinearApproximationValues(val coefficientsExplore:mutable.HashMap[String, 
   }
 }
 
-class ProxyValues(url:String) extends Values{
+class ProxyValues(url:String) extends Values with LazyLogging {
   private implicit val httpClient: CloseableHttpClient = HttpClients.createDefault
+
+  def reset(): Unit = {
+    val endpoint = "http://localhost:5000/"
+    val arg2 = s"approximator=linear"
+    val args = "?" + Seq(arg2).mkString("&")
+    val request = new HttpGet(s"$endpoint/reset$args")
+    val _ = httpClient.execute(request)
+  }
+
+  reset()
 
   override def apply(key: (State, Actions.Value)): Double = {
     val (state, action) = key
@@ -213,18 +227,45 @@ class ProxyValues(url:String) extends Values{
         }
       }
 
-    val response = HttpUtils.httpPut("td_update", payload)
+    val response = HttpUtils.httpPut("backwards", payload)
 
-    val changed =
-      for{
-        JBool(c) <- parse(response)
-      } yield c
-
-    changed.head
+//    val changed =
+//      for{
+//        JBool(c) <- parse(response)
+//      } yield c
+//
+//    changed.head
+    true
   }
 
   override def toJson: JObject = {
+
+    import HttpUtils.using
+
+    val name = "dqn.bin"
+
+    val request = new HttpPost(s"$url/save?name=$name")
+    val response = httpClient.execute(request)
+
+    Try {
+      val entity = response.getEntity
+      if (entity != null) {
+        using(entity.getContent){
+          stream =>
+            Source.fromInputStream(stream).mkString
+        }
+      }
+      else
+        ""
+    } match {
+      case Success(content) =>
+        content
+      case Failure(exception) =>
+        logger.error(exception.getMessage)
+        ""
+    }
+
     ("type" -> "proxy") ~
-      ("model_name" -> "CHANGEME") // TODO change me
+      ("model_name" -> name) 
   }
 }
