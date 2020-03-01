@@ -90,6 +90,8 @@ object SimplePathRL extends App with LazyLogging{
 
   val bootstrap = new mutable.HashMap[Int, (Boolean, Int, String)]() // (Success, # queries, papers)
 
+  val policy = Policy.loadPolicy("learnt_policy.json").asInstanceOf[EpGreedyPolicy].makeGreedy
+
   for((datum, ix) <- dataSet.zipWithIndex){
 
     val start = System.nanoTime()
@@ -102,7 +104,6 @@ object SimplePathRL extends App with LazyLogging{
     logger.info(s"About to start a focused search $ix of ${dataSet.size}")
 
     //val agent = new LuceneReachSearchAgent(participantA, participantB)
-    val policy = Policy.loadPolicy("learnt_policy.json").asInstanceOf[EpGreedyPolicy].makeGreedy
     val agent = new PolicySearchAgent(participantA, participantB, policy)
     // val agent = new SQLiteMultiPathSearchAgent(participantA, participantB)
     agent.focusedSearch(participantA, participantB)

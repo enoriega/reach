@@ -39,25 +39,21 @@ class DQN(environmentFabric:() => Option[Environment], episodeBound:Int, burnInE
           var currentState = environment.observeState
 
           // Evaluate the policy
-          // TODO Port 2 PyTorch
           var currentAction = policy.selectAction(currentState)
 
           // Enter into the episode loop
           while(!environment.finishedEpisode){
             // Execute chosen action and observe reward
-            // TODO Port 2 PyTorch
             val reward = environment.executePolicy(currentAction)
 
             // Observe the new state after executing the action
             val nextState = environment.observeState
 
             // Chose a new action
-            // TODO Port 2 PyTorch
             val nextAction = policy.selectAction(nextState)
 
 
             // Perform the update
-            // TODO Port 2 PyTorch
             val actionValues = policy.values
             val changed = actionValues.tdUpdate((currentState, currentAction), (nextState, nextAction), reward, currentAlpha, gamma)
 
@@ -85,7 +81,7 @@ class DQN(environmentFabric:() => Option[Environment], episodeBound:Int, burnInE
       episode = environmentFabric()
 
 
-    }while(episode != None && (!stable || episodeCount <= burnInEpisodes) && episodeCount <= episodeBound)
+    }while(episode.isDefined && (!stable || episodeCount <= burnInEpisodes) && episodeCount <= episodeBound)
 
     if(stable)
       logger.info(s"Converged on $episodeCount episodes")

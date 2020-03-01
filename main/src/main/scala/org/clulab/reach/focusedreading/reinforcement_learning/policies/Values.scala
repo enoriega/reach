@@ -52,6 +52,13 @@ object Values{
           coefficientsExploit += (k -> v.extract[Double])
         }
         new LinearApproximationValues(coefficientsExplore, coefficientsExploit)
+      case JString("proxy") =>
+        val values = new ProxyValues("http://localhost:5000")
+        val modelName = (ast \ "model_name").asInstanceOf[JString].s
+
+        values.load(modelName)
+
+          values
       case _ =>
         throw new NotImplementedError("Not yet implemented")
     }
@@ -186,6 +193,13 @@ class ProxyValues(url:String) extends Values with LazyLogging {
 
   reset()
 
+  def load(name:String) = {
+    val endpoint = "http://localhost:5000/"
+    val functionalForm = "linear" // TODO: Make this parametelizable
+    val request = new HttpPost(s"$endpoint/load?approximator=$functionalForm&name=$name")
+    val _ = httpClient.execute(request)
+  }
+
   override def apply(key: (State, Actions.Value)): Double = {
     val (state, action) = key
 
@@ -266,6 +280,6 @@ class ProxyValues(url:String) extends Values with LazyLogging {
     }
 
     ("type" -> "proxy") ~
-      ("model_name" -> name) 
+      ("model_name" -> name)
   }
 }

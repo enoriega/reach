@@ -48,7 +48,7 @@ class EpGreedyPolicy(epsilon:Double, val values:Values) extends Policy {
 
     val bfw = new BufferedWriter(new FileWriter(path))
     bfw.write(json)
-    bfw.close
+    bfw.close()
   }
 
   def makeGreedy:GreedyPolicy = new GreedyPolicy(values)

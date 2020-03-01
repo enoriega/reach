@@ -12,7 +12,7 @@ import org.clulab.reach.focusedreading.reinforcement_learning.policy_iteration.t
   */
 
 object TabularSARSA extends App {
-  // The first argument is the input file
+  // The first argument is the input filed
   val dataSet:Iterator[Tuple2[String, String]] = Iterator.continually(io.Source.fromFile(args(0)).getLines
     .map{
       s =>
@@ -70,6 +70,7 @@ object LinearSARSA extends App {
 
   val policyIteration = new DQN(focusedReadingFabric, 2000, 30)
   val qFunction = new ProxyValues("http://localhost:5000")
+//  val qFunction = new LinearApproximationValues()
   val initialPolicy = new EpGreedyPolicy(0.1, qFunction)
 
   val learntPolicy = policyIteration.iteratePolicy(initialPolicy)
