@@ -56,7 +56,8 @@ object Values{
       case JString("proxy") =>
         val conf = ConfigFactory.load()
         val endpoint = conf.getString("DyCE.endpoint")
-        val values = new ProxyValues(endpoint)
+        val architecture = conf.getString("DyCE.architecture")
+        val values = new ProxyValues(endpoint, architecture)
         val modelName = (ast \ "model_name").asInstanceOf[JString].s
 
         values.load(modelName)
@@ -183,23 +184,21 @@ class LinearApproximationValues(val coefficientsExplore:mutable.HashMap[String, 
   }
 }
 
-class ProxyValues(url:String) extends Values with LazyLogging {
+class ProxyValues(url:String, functionalForm:String) extends Values with LazyLogging {
   private implicit val httpClient: CloseableHttpClient = HttpClients.createDefault
 
   def reset(): Unit = {
-    val endpoint = "http://localhost:5000/"
-    val arg2 = s"approximator=linear"
+//    val endpoint = "http://localhost:5000/"
+    val arg2 = s"approximator=$functionalForm"
     val args = "?" + Seq(arg2).mkString("&")
-    val request = new HttpGet(s"$endpoint/reset$args")
+    val request = new HttpGet(s"$url/reset$args")
     val _ = httpClient.execute(request)
   }
 
   reset()
 
   def load(name:String) = {
-    val endpoint = "http://localhost:5000/"
-    val functionalForm = "linear" // TODO: Make this parametelizable
-    val request = new HttpPost(s"$endpoint/load?approximator=$functionalForm&name=$name")
+    val request = new HttpPost(s"$url/load?approximator=$functionalForm&name=$name")
     val _ = httpClient.execute(request)
   }
 

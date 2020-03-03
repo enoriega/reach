@@ -57,6 +57,7 @@ object LinearSARSA extends App {
   val inputPath = conf.getString("DyCE.Training.file")
   val jsonPath = conf.getString("DyCE.Training.policyFile")
   val endPoint = conf.getString("DyCE.endpoint")
+  val architecture = conf.getString("DyCE.architecture")
 
   // The first argument is the input file
   // The first argument is the input file
@@ -82,7 +83,7 @@ object LinearSARSA extends App {
   }
 
   val policyIteration = new SARSA(focusedReadingFabric, 100000, 3000)
-  val qFunction = new ProxyValues(endPoint)
+  val qFunction = new ProxyValues(endPoint, architecture)
 //  val qFunction = new LinearApproximationValues()
   val initialPolicy = new EpGreedyPolicy(0.1, qFunction)
 
