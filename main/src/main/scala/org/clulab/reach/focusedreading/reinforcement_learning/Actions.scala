@@ -4,7 +4,8 @@ package org.clulab.reach.focusedreading.reinforcement_learning
   * Created by enrique on 26/03/17.
   */
 object Actions extends Enumeration{
-  val Disjunction,Conjunction = Value
+  val Disjunction = Value(0) // Exploration
+  val Conjunction = Value(1) // Exploitation
 
   val cardinality:Int = Actions.values.size
 

@@ -1,6 +1,7 @@
 package org.clulab.reach.focusedreading.reinforcement_learning.policies
 
 import breeze.linalg.DenseVector
+import com.typesafe.config.ConfigFactory
 import com.typesafe.scalalogging.LazyLogging
 import org.apache.http.client.methods.{HttpGet, HttpPost}
 import org.apache.http.impl.client.{CloseableHttpClient, HttpClients}
@@ -53,7 +54,9 @@ object Values{
         }
         new LinearApproximationValues(coefficientsExplore, coefficientsExploit)
       case JString("proxy") =>
-        val values = new ProxyValues("http://localhost:5000")
+        val conf = ConfigFactory.load()
+        val endpoint = conf.getString("DyCE.endpoint")
+        val values = new ProxyValues(endpoint)
         val modelName = (ast \ "model_name").asInstanceOf[JString].s
 
         values.load(modelName)
@@ -243,13 +246,9 @@ class ProxyValues(url:String) extends Values with LazyLogging {
 
     val response = HttpUtils.httpPut("backwards", payload)
 
-//    val changed =
-//      for{
-//        JBool(c) <- parse(response)
-//      } yield c
-//
-//    changed.head
-    true
+    val change = response.toFloat
+
+    Math.abs(change) > tolerance
   }
 
   override def toJson: JObject = {

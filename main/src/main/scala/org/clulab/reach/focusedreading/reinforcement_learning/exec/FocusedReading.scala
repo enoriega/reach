@@ -2,6 +2,7 @@ package org.clulab.reach.focusedreading.reinforcement_learning.exec.focused_read
 
 import breeze.linalg.{DenseVector, linspace}
 import breeze.plot.{Figure, plot}
+import com.typesafe.config.ConfigFactory
 import org.clulab.reach.focusedreading.Participant
 import org.clulab.reach.focusedreading.reinforcement_learning.environment.{Environment, SimplePathEnvironment}
 import org.clulab.reach.focusedreading.reinforcement_learning.policies.{EpGreedyPolicy, LinearApproximationValues, ProxyValues, TabularValues}
@@ -12,8 +13,14 @@ import org.clulab.reach.focusedreading.reinforcement_learning.policy_iteration.t
   */
 
 object TabularSARSA extends App {
+
+  val conf = ConfigFactory.load()
+  val inputPath = conf.getString("DyCE.Training.file")
+  val jsonPath = conf.getString("DyCE.Training.policyFile")
+  val endPoint = conf.getString("DyCE.endpoint")
+
   // The first argument is the input filed
-  val dataSet:Iterator[Tuple2[String, String]] = Iterator.continually(io.Source.fromFile(args(0)).getLines
+  val dataSet:Iterator[Tuple2[String, String]] = Iterator.continually(io.Source.fromFile(inputPath).getLines
     .map{
       s =>
         val t = s.split("\t").toSeq
@@ -45,9 +52,15 @@ object TabularSARSA extends App {
 }
 
 object LinearSARSA extends App {
+
+  val conf = ConfigFactory.load()
+  val inputPath = conf.getString("DyCE.Training.file")
+  val jsonPath = conf.getString("DyCE.Training.policyFile")
+  val endPoint = conf.getString("DyCE.endpoint")
+
   // The first argument is the input file
   // The first argument is the input file
-  val dataSet:Iterator[Tuple2[String, String]] = Iterator.continually(io.Source.fromFile(args(0)).getLines
+  val dataSet:Iterator[Tuple2[String, String]] = Iterator.continually(io.Source.fromFile(inputPath).getLines
     .map{
       s =>
         val t = s.split("\t").toSeq
@@ -68,8 +81,8 @@ object LinearSARSA extends App {
       None
   }
 
-  val policyIteration = new DQN(focusedReadingFabric, 2000, 30)
-  val qFunction = new ProxyValues("http://localhost:5000")
+  val policyIteration = new SARSA(focusedReadingFabric, 100000, 3000)
+  val qFunction = new ProxyValues(endPoint)
 //  val qFunction = new LinearApproximationValues()
   val initialPolicy = new EpGreedyPolicy(0.1, qFunction)
 
@@ -77,7 +90,7 @@ object LinearSARSA extends App {
 
   // Store the policy somewhere
   // Serializer.save(learntPolicy, "learnt_policy.ser")
-  learntPolicy.save("learnt_policy.json")
+  learntPolicy.save(jsonPath)
 
 //  val f = Figure()
 //  val p = f.subplot(0)

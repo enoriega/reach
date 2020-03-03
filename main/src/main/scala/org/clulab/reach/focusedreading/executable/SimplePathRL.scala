@@ -3,6 +3,7 @@ package org.clulab.reach.focusedreading.executable
 import java.io.{BufferedWriter, File, FileOutputStream, FileWriter}
 import java.nio.file.Paths
 
+import com.typesafe.config.ConfigFactory
 import org.apache.commons.io.FileUtils
 import org.clulab.reach.focusedreading.{Connection, Participant}
 import org.clulab.reach.focusedreading.agents.{PolicySearchAgent, SQLiteSearchAgent, SearchAgent}
@@ -18,6 +19,11 @@ import org.clulab.reach.focusedreading.reinforcement_learning.policies._
   * Created by enrique on 03/04/17.
   */
 object SimplePathRL extends App with LazyLogging{
+
+  val conf = ConfigFactory.load()
+  val inputPath = conf.getString("DyCE.Testing.file")
+  val jsonPath = conf.getString("DyCE.Testing.policyFile")
+  val endPoint = conf.getString("DyCE.endpoint")
 
   def getParticipants(path:List[Connection]):List[String] = {
     path match {
@@ -50,7 +56,7 @@ object SimplePathRL extends App with LazyLogging{
   } */
 
   // The first argument is the input file
-  val dataSet:Iterable[Seq[String]] = io.Source.fromFile(args(0)).getLines
+  val dataSet:Iterable[Seq[String]] = io.Source.fromFile(inputPath).getLines
     .map{
       s =>
         val t = s.split("\t").toSeq
@@ -90,7 +96,7 @@ object SimplePathRL extends App with LazyLogging{
 
   val bootstrap = new mutable.HashMap[Int, (Boolean, Int, String)]() // (Success, # queries, papers)
 
-  val policy = Policy.loadPolicy("learnt_policy.json").asInstanceOf[EpGreedyPolicy].makeGreedy
+  val policy = Policy.loadPolicy(jsonPath).asInstanceOf[EpGreedyPolicy].makeGreedy
 
   for((datum, ix) <- dataSet.zipWithIndex){
 
