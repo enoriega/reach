@@ -23,7 +23,7 @@ object RandomWalk extends App{
   val policyIterator = new SARSA(randomWalkFabric, 10000, 10)
   val qFunction = new LinearApproximationValues
   //val qFunction = new TabularValues(0.0)
-  val initialPolicy = new EpGreedyPolicy(0.5, qFunction)
+  val initialPolicy = new EpGreedyPolicy(Stream.continually(0.5).iterator, qFunction)
 
   println("Initial policy:")
   for(i <- 1 until numStates){

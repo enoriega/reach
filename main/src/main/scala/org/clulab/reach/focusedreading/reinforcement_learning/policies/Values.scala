@@ -195,6 +195,16 @@ class ProxyValues(url:String, functionalForm:String) extends Values with LazyLog
     val _ = httpClient.execute(request)
   }
 
+  def loss:Option[Float] = {
+    val response = HttpUtils.httpGet("last_loss")
+
+    if(response != "")
+      Some(response.toFloat)
+    else
+      None
+
+  }
+
   reset()
 
   def load(name:String) = {

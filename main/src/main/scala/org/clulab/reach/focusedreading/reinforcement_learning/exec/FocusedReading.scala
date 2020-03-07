@@ -43,7 +43,7 @@ object TabularSARSA extends App {
 
   val policyIteration = new SARSA(focusedReadingFabric, 10000, 30, 0.005)
   val qFunction = new TabularValues(0)
-  val initialPolicy = new EpGreedyPolicy(0.1, qFunction)
+  val initialPolicy = new EpGreedyPolicy(Stream.continually(0.1).iterator, qFunction)
 
   val learntPolicy = policyIteration.iteratePolicy(initialPolicy)
 
@@ -82,10 +82,16 @@ object LinearSARSA extends App {
       None
   }
 
-  val policyIteration = new SARSA(focusedReadingFabric, 100000, 3000)
+  val episodeBound = 100000
+  val policyIteration = new SARSA(focusedReadingFabric, 100000, 30000)
   val qFunction = new ProxyValues(endPoint, architecture)
 //  val qFunction = new LinearApproximationValues()
-  val initialPolicy = new EpGreedyPolicy(0.1, qFunction)
+
+  val first_epsilon = 0.5
+  val epsilonDecrease = first_epsilon/episodeBound
+  val epsilons = (0 to episodeBound).toStream.map(i => first_epsilon - (i*epsilonDecrease)).iterator
+
+  val initialPolicy = new EpGreedyPolicy(epsilons, qFunction)
 
   val learntPolicy = policyIteration.iteratePolicy(initialPolicy)
 
@@ -93,6 +99,7 @@ object LinearSARSA extends App {
   // Serializer.save(learntPolicy, "learnt_policy.ser")
   learntPolicy.save(jsonPath)
 
+  /*
 //  val f = Figure()
 //  val p = f.subplot(0)
 //  val x = linspace(0.0, policyIteration.controlCount.toDouble, policyIteration.controlCount)
@@ -140,5 +147,7 @@ object LinearSARSA extends App {
 //  p2.ylabel = "Coef Exploit value"
 //
 //  f2.saveas("plot_exploit.png")
+*/
+
 }
 

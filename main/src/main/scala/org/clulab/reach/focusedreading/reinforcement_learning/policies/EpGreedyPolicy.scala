@@ -13,11 +13,13 @@ import org.json4s.JsonDSL._
 /**
   * Created by enrique on 26/03/17.
   */
-class EpGreedyPolicy(epsilon:Double, val values:Values) extends Policy {
+class EpGreedyPolicy(epsilons:Iterator[Double], val values:Values) extends Policy {
 
-  assert(epsilon <= 1 && epsilon >= 0, s"Invalid Epsilon value: $epsilon")
+  val first_epsilon = epsilons.next()
+  assert(first_epsilon <= 1 && first_epsilon >= 0, s"Invalid Epsilon value: $first_epsilon")
 
   override def selectAction(s: State):Actions.Value = {
+    val epsilon = epsilons.next()
     val numActions = Actions.values.size
     val slice = epsilon / numActions
     val greedyProb = 1 - epsilon + slice
@@ -40,7 +42,7 @@ class EpGreedyPolicy(epsilon:Double, val values:Values) extends Policy {
   override def save(path:String): Unit ={
     val ast = {
       ("type" -> "ep_greedy") ~
-      ("epsilon" -> epsilon) ~
+      ("epsilon" -> first_epsilon) ~
         ("values" -> values.toJson)
     }
 
