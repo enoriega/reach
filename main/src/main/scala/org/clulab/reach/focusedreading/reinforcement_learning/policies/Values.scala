@@ -260,11 +260,11 @@ class ProxyValues(url:String, functionalForm:String) extends Values with LazyLog
     Math.abs(change) > tolerance
   }
 
-  override def toJson: JObject = {
+  override def toJson: JObject = toJson("dqn.bin")
+
+  def toJson(name:String): JObject = {
 
     import HttpUtils.using
-
-    val name = "dqn.bin"
 
     val request = new HttpPost(s"$url/save?name=$name")
     val response = httpClient.execute(request)

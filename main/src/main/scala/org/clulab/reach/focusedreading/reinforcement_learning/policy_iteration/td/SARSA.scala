@@ -3,6 +3,9 @@ package org.clulab.reach.focusedreading.reinforcement_learning.policy_iteration.
 import org.clulab.reach.focusedreading.reinforcement_learning.policies._
 import com.typesafe.scalalogging.LazyLogging
 import org.clulab.reach.focusedreading.reinforcement_learning.environment._
+import org.clulab.reach.focusedreading.reinforcement_learning.Actions
+
+import scala.collection.mutable.ListBuffer
 
 
 /**
@@ -10,6 +13,7 @@ import org.clulab.reach.focusedreading.reinforcement_learning.environment._
   */
 class SARSA(environmentFabric:() => Option[Environment], episodeBound:Int, burnInEpisodes:Int, alpha:Double = 0.01, gamma:Double = 0.8) extends LazyLogging {
 
+  val actionLog = new ListBuffer[Actions.Value]
   var stable = true
   var episodeCount = 0
   var controlCount = 0
@@ -80,6 +84,10 @@ class SARSA(environmentFabric:() => Option[Environment], episodeBound:Int, burnI
 
           if(episodeCount % 10 == 0)
             logger.info(s"Episode $episodeCount")
+
+          if (episodeCount % 1000 == 0 && episodeCount > 1){
+            policy.save(Some(s"model_${episodeCount}.pt"), s"partial_policy_${episodeCount}.json")
+          }
 
         case None => Unit
       }

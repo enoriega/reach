@@ -39,11 +39,19 @@ class EpGreedyPolicy(epsilons:Iterator[Double], val values:Values) extends Polic
     choice
   }
 
-  override def save(path:String): Unit ={
+  override def save(path: String): Unit = save(None, path)
+
+  def save(name:Option[String], path:String): Unit ={
     val ast = {
       ("type" -> "ep_greedy") ~
       ("epsilon" -> first_epsilon) ~
-        ("values" -> values.toJson)
+        ("values" -> (name match {
+          case Some(n) =>
+            values.asInstanceOf[ProxyValues].toJson(n)
+          case None =>
+            values.toJson
+        })
+        )
     }
 
     val json = pretty(render(ast))
