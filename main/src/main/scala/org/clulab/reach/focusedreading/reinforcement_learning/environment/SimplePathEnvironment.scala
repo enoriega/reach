@@ -1,7 +1,7 @@
 package org.clulab.reach.focusedreading.reinforcement_learning.environment
 
 import org.clulab.reach.focusedreading.{MostConnectedAndRecentParticipantsStrategy, MostConnectedParticipantsStrategy, Participant}
-import org.clulab.reach.focusedreading.agents.SQLiteSearchAgent
+import org.clulab.reach.focusedreading.agents.{PolicySearchAgent, SQLiteSearchAgent}
 import org.clulab.reach.focusedreading.ir.{Query, QueryStrategy}
 import org.clulab.reach.focusedreading.models.{GFSModel, SearchModel}
 import org.clulab.reach.focusedreading.reinforcement_learning.Actions
@@ -104,7 +104,7 @@ class SimplePathEnvironment(participantA:Participant, participantB:Participant) 
     }
   }
 
-  private def fillState(model:SearchModel, iterationNum:Int, queryLog:Seq[(Participant, Participant)], introductions:mutable.Map[Participant, Int]):State = {
+  def fillState(model:SearchModel, iterationNum:Int, queryLog:Seq[(Participant, Participant)], introductions:mutable.Map[Participant, Int]):State = {
 
       val (a, b) = queryLog.last
       val log = queryLog flatMap (l => Seq(l._1, l._2))
@@ -124,7 +124,11 @@ class SimplePathEnvironment(participantA:Participant, participantB:Participant) 
       val paRank = getRank(a, ranks)
       val pbRank = getRank(b, ranks)
 
-      FocusedReadingState(RankBin.First, RankBin.Bottom, iterationNum, paQueryLogCount,pbQueryLogCount,sameComponent,paIntro,pbIntro)
+      val paLemmas = PolicySearchAgent.getParticipantLemmas(a)
+      val pbLemmas = PolicySearchAgent.getParticipantLemmas(b)
+
+
+      FocusedReadingState(RankBin.First, RankBin.Bottom, iterationNum, paQueryLogCount,pbQueryLogCount,sameComponent,paIntro,pbIntro, paLemmas, pbLemmas)
   }
 
   override def observeState:State = {

@@ -26,11 +26,13 @@ case class FocusedReadingState(paRank:RankBin.Value,
                                pbQueryLogCount:Int,
                                sameComponent:Boolean,
                                paIterationIntroduction:Int,
-                               pbIterationIntroduction:Int
+                               pbIterationIntroduction:Int,
+                               paLemmas:Seq[Seq[Int]],
+                               pbLemmas:Seq[Seq[Int]]
                               ) extends State{
 
   override def hashCode(): Int = {
-    s"$paRank-$pbRank-$iteration-$paQueryLogCount-$pbQueryLogCount-$sameComponent-$paIterationIntroduction-$pbIterationIntroduction".hashCode
+    s"$paRank-$pbRank-$iteration-$paQueryLogCount-$pbQueryLogCount-$sameComponent-$paIterationIntroduction-$pbIterationIntroduction-${paLemmas.mkString(" ")}-${pbLemmas.mkString(" ")}".hashCode
   }
 
   override def equals(obj: scala.Any): Boolean = {
@@ -43,7 +45,10 @@ case class FocusedReadingState(paRank:RankBin.Value,
         && pbQueryLogCount == that.pbQueryLogCount
         && sameComponent == that.sameComponent
         && paIterationIntroduction == that.paIterationIntroduction
-        && pbIterationIntroduction == that.pbIterationIntroduction)
+        && pbIterationIntroduction == that.pbIterationIntroduction
+        && paLemmas == that.paLemmas
+        && pbLemmas == that.pbLemmas
+      )
         true
       else
         false
@@ -61,7 +66,19 @@ case class FocusedReadingState(paRank:RankBin.Value,
       "sameComponent" ->  (sameComponent match{ case true => 1.0; case false => 0.0 }),
       "paIterationIntroduction" -> paIterationIntroduction.toDouble,
       "pbIterationIntroduction" -> pbIterationIntroduction.toDouble
-    )  ++ RankBin.toFeatures(paRank, "paRank") ++ RankBin.toFeatures(pbRank, "pbRank")
+    )  ++ RankBin.toFeatures(paRank, "paRank") ++ RankBin.toFeatures(pbRank, "pbRank") ++
+       paLemmas.zipWithIndex.flatMap{
+         case (synonym, groupIx) =>
+           synonym.zipWithIndex.map{
+             case (voxIx, ix) => (s"paLemma_${groupIx}_$ix" -> voxIx.toDouble)
+           }
+       }.toMap ++
+      pbLemmas.zipWithIndex.flatMap{
+        case (synonym, groupIx) =>
+          synonym.zipWithIndex.map{
+            case (voxIx, ix) => (s"pbLemma_${groupIx}_$ix" -> voxIx.toDouble)
+          }
+      }.toMap
   }
 }
 
@@ -87,7 +104,7 @@ object FocusedReadingState{
       sameComponent <- Seq(true, false);
       paIterationIntroduction <- iterations;
       pbIterationIntroduction <- iterations
-    } yield FocusedReadingState(paRank, pbRank, iteration, paQueryLogCount, pbQueryLogCount, sameComponent, paIterationIntroduction, pbIterationIntroduction)
+    } yield FocusedReadingState(paRank, pbRank, iteration, paQueryLogCount, pbQueryLogCount, sameComponent, paIterationIntroduction, pbIterationIntroduction, Seq(), Seq())
 
     assert(states.size == cardinality, s"There's a different number of stats than the computed cardinality. States: ${states.size}, Cardinality: $cardinality")
     states

@@ -1,6 +1,8 @@
 package org.clulab.reach.focusedreading.agents
 
 import com.typesafe.scalalogging.LazyLogging
+import org.clulab.processors.bionlp.BioNLPProcessor
+import org.clulab.reach.focusedreading.FillBlanks.logger
 import org.clulab.reach.focusedreading.ie.{REACHIEStrategy, SQLIteIEStrategy}
 import org.clulab.reach.focusedreading.ir.QueryStrategy._
 import org.clulab.reach.focusedreading.ir.{LuceneIRStrategy, Query, SQLIRStrategy}
@@ -9,8 +11,10 @@ import org.clulab.reach.focusedreading.models._
 import org.clulab.reach.focusedreading.reinforcement_learning.states._
 import org.clulab.reach.focusedreading.reinforcement_learning.policies.Policy
 import org.clulab.reach.focusedreading.{Connection, ExploreExploitParticipantsStrategy, MostConnectedParticipantsStrategy, Participant}
+import org.clulab.reach.grounding.ReachKBUtils
 
 import scala.collection.mutable
+import scala.io.Source
 
 /**
   * Created by enrique on 18/02/17.
@@ -150,7 +154,10 @@ class PolicySearchAgent(participantA:Participant, participantB:Participant, val 
     val paRank = getRank(a, ranks)
     val pbRank = getRank(b, ranks)
 
-    FocusedReadingState(RankBin.First, RankBin.Bottom, iterationNum, paQueryLogCount,pbQueryLogCount,sameComponent,paIntro,pbIntro)
+    val paLemmas = PolicySearchAgent.getParticipantLemmas(a)
+    val pbLemmas = PolicySearchAgent.getParticipantLemmas(b)
+
+    FocusedReadingState(RankBin.First, RankBin.Bottom, iterationNum, paQueryLogCount,pbQueryLogCount,sameComponent,paIntro,pbIntro, paLemmas, pbLemmas)
   }
 
   private def getRank(p:Participant, ranks:Map[Participant, Int]):RankBin.Value = {
@@ -201,5 +208,54 @@ class PolicySearchAgent(participantA:Participant, participantB:Participant, val 
 
 }
 
+object PolicySearchAgent{
+
+  val processor = new BioNLPProcessor(withChunks=false, withCRFNER=false, withRuleNER=false, withContext=false)
+  val vocLines = Source.fromFile("pubmedix.txt").getLines().toList
+  val vocIx:Map[String, Int] = vocLines.map{
+    s =>
+      val t = s.split("\t")
+      t.head -> t.last.toInt
+  }.toMap
+
+//  logger.info("Loading KBs...")
+  var lines = ReachKBUtils.sourceFromResource(ReachKBUtils.makePathInKBDir("uniprot-proteins.tsv.gz")).getLines.toSeq
+  lines ++= ReachKBUtils.sourceFromResource(ReachKBUtils.makePathInKBDir("GO-subcellular-locations.tsv.gz")).getLines.toSeq
+  lines ++= ReachKBUtils.sourceFromResource(ReachKBUtils.makePathInKBDir("ProteinFamilies.tsv.gz")).getLines.toSeq
+  lines ++= ReachKBUtils.sourceFromResource(ReachKBUtils.makePathInKBDir("PubChem.tsv.gz")).getLines.toSeq
+  lines ++= ReachKBUtils.sourceFromResource(ReachKBUtils.makePathInKBDir("PFAM-families.tsv.gz")).getLines.toSeq
+  lines ++= ReachKBUtils.sourceFromResource(ReachKBUtils.makePathInKBDir("bio_process.tsv.gz")).getLines.toSeq
+  lines ++= ReachKBUtils.sourceFromResource(ReachKBUtils.makePathInKBDir("ProteinFamilies.tsv.gz")).getLines.toSeq
+  lines ++= ReachKBUtils.sourceFromResource(ReachKBUtils.makePathInKBDir("hgnc.tsv.gz")).getLines.toSeq
+
+  val dict: Map[String, Seq[String]] = lines.map{ l => val t = l.split("\t"); (t(1), t(0)) }.groupBy(t=> t._1).mapValues(l => l.map(_._2).distinct)
+
+  val lemmasCache = new mutable.WeakHashMap[Participant, Seq[Seq[Int]]]//new mutable.HashMap[Participant, Seq[Seq[Int]]]
+
+  def getParticipantLemmas(participant: Participant):Seq[Seq[Int]] = {
+    if(lemmasCache.contains(participant))
+      lemmasCache(participant)
+    else {
+      val synonyms = dict.get(participant.id)
+      val ret =
+        (synonyms match {
+          case Some(syns) =>
+            val doc = processor.annotateFromSentences(syns)
+            val indices =
+              for (sen <- doc.sentences) yield {
+                val lemmas = sen.lemmas.get
+                lemmas.map(vocIx.lift).collect { case Some(i) => i }.toSeq
+              }
+            indices.toSeq filter (_.nonEmpty)
+          case None =>
+            Seq.empty[Seq[Int]]
+        })
+
+      lemmasCache += (participant -> ret)
+      ret
+    }
+
+  }
+}
 
 
