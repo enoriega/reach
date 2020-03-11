@@ -59,12 +59,17 @@ class SARSA(environmentFabric:() => Option[Environment], episodeBound:Int, burnI
             // Perform the update
             val actionValues = policy.values
             val changed = actionValues.tdUpdate((currentState, currentAction), (nextState, nextAction), reward, currentAlpha, gamma)
-            val loss = actionValues.asInstanceOf[ProxyValues].loss
-            loss match {
-              case Some(l) =>
-                logger.info(s"Loss: $l")
-              case None => ()
+            actionValues match {
+              case v:ProxyValues =>
+                val loss = v.loss
+                loss match {
+                  case Some(l) =>
+                    logger.info(s"Loss: $l")
+                  case None => ()
+                }
+              case _ => ()
             }
+
 
 
             // Keep track of the fluctuations of the values

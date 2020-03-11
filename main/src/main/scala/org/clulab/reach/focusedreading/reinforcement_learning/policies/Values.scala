@@ -116,7 +116,7 @@ class LinearApproximationValues(val coefficientsExplore:mutable.HashMap[String, 
       case Actions.Disjunction => coefficientsExplore
     }
     // Encode the state vector into features
-    val features = Map("bias" -> 1.0) ++ key._1.toFeatures //++ Actions.toFeatures(key._2)
+    val features = Map("bias" -> 1.0) ++ key._1.toFeatures.filterKeys(k => !k.contains("Lemma_")) //++ Actions.toFeatures(key._2)
 
     // Do the dot product with the coefficients
     val products = features map {
@@ -138,7 +138,7 @@ class LinearApproximationValues(val coefficientsExplore:mutable.HashMap[String, 
     }
 
     // The gradient are the feature values because this is a linear function optimizing MSE
-    val gradient = Map("bias" -> 1.0) ++ current._1.toFeatures //++ Actions.toFeatures(current._2)
+    val gradient = Map("bias" -> 1.0) ++ current._1.toFeatures.filterKeys(k => !k.contains("Lemma_")) //++ Actions.toFeatures(current._2)
 
     val currentVal = this(current)
     val nextVal =this(next)

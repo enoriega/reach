@@ -18,7 +18,7 @@ for ix, (training_path, testing_path) in enumerate(zip(TRAINING_FILES, TESTING_F
     testing_output = f"testing_output{ix}.txt"
 
     training_cmd = f"sbt -DDyCE.Training.file={training_path} -DDyCE.Training.policyFile={policy_file} \"runMain org.clulab.reach.focusedreading.reinforcement_learning.exec.focused_reading.LinearSARSA\""
-    testing_cmd = f"sbt -DDyCE.Testing.file={training_path} -DDyCE.Testing.policyFile={policy_file} \"runMain org.clulab.reach.focusedreading.executable.SimplePathRL\""
+    testing_cmd = f"sbt -DDyCE.Testing.file={testing_path} -DDyCE.Testing.policyFile={policy_file} \"runMain org.clulab.reach.focusedreading.executable.SimplePathRL\""
 
     with open(training_output, 'w') as ftrain, open(testing_output, 'w') as ftest:
         print("Training ...")

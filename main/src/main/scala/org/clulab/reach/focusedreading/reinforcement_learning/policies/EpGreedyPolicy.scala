@@ -47,7 +47,13 @@ class EpGreedyPolicy(epsilons:Iterator[Double], val values:Values) extends Polic
       ("epsilon" -> first_epsilon) ~
         ("values" -> (name match {
           case Some(n) =>
-            values.asInstanceOf[ProxyValues].toJson(n)
+            values match {
+              case v:ProxyValues =>
+                v.toJson(n)
+              case v =>
+                v.toJson
+            }
+
           case None =>
             values.toJson
         })
