@@ -1,6 +1,8 @@
 
 import os
 import os.path as path
+from tqdm import tqdm
+from glob import glob
 
 print("Performig Cross Validation")
 
@@ -17,16 +19,25 @@ for ix, (training_path, testing_path) in enumerate(zip(TRAINING_FILES, TESTING_F
     training_output = f"training_output{ix}.txt"
     testing_output = f"testing_output{ix}.txt"
 
-    training_cmd = f"sbt -DDyCE.Training.file={training_path} -DDyCE.Training.policyFile={policy_file} \"runMain org.clulab.reach.focusedreading.reinforcement_learning.exec.focused_reading.LinearSARSA\""
-    testing_cmd = f"sbt -DDyCE.Testing.file={testing_path} -DDyCE.Testing.policyFile={policy_file} \"runMain org.clulab.reach.focusedreading.executable.SimplePathRL\""
+    training_cmd = f"sbt -J-Xmx12g -DDyCE.Training.file={training_path} -DDyCE.Training.policyFile={policy_file} \"runMain org.clulab.reach.focusedreading.reinforcement_learning.exec.focused_reading.LinearSARSA\""
+    testing_cmd = f"sbt -J-Xmx12g -DDyCE.Testing.file={testing_path} -DDyCE.Testing.policyFile={policy_file} \"runMain org.clulab.reach.focusedreading.executable.SimplePathRL\""
 
     with open(training_output, 'w') as ftrain, open(testing_output, 'w') as ftest:
         print("Training ...")
         ftrain.write(os.popen(training_cmd).read())
+        # print(training_cmd)
         print("Testing ...")
         ftest.write(os.popen(testing_cmd).read())
+        # print(testing_cmd)
     # os.system(training_cmd)
     # os.system(testing_cmd)
+    for episode, partial_policy_file in tqdm(enumerate(glob("partial_policy*.json"))):
+        episode *= 10
+        partial_testing_output = f"partial_testing_output{ix}_{episode}.txt"
+        with open(partial_testing_output, 'w') as pftest:
+            partial_testing_cmd = f"sbt -J-Xmx12g -DDyCE.Testing.file={testing_path} -DDyCE.Testing.policyFile={partial_policy_file} \"runMain org.clulab.reach.focusedreading.executable.SimplePathRL\""
+            pftest.write(os.popen(partial_testing_cmd).read())
+            # print(partial_testing_cmd)
     print()
 
 print("Done!")
