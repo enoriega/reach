@@ -110,10 +110,10 @@ object LinearSARSA extends App with LazyLogging {
 
   }
 
-  val episodeBound = 100
+  val episodeBound = 1000
   val policyIteration = new SARSA(focusedReadingFabric, episodeBound, episodeBound)
-//  val qFunction = new ProxyValues(endPoint, architecture)
-  val qFunction = new LinearApproximationValues()
+  val qFunction = new ProxyValues(endPoint, architecture)
+//  val qFunction = new LinearApproximationValues()
   val first_epsilon = 1.0
   val epsilonDecrease = first_epsilon/(episodeBound/2)
   val epsilons = ((0 to (episodeBound/2)).toStream.map(i => first_epsilon - (i*epsilonDecrease)).iterator) ++ Stream.continually(0.0)

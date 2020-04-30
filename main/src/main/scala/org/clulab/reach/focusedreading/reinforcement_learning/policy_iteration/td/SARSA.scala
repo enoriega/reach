@@ -90,7 +90,7 @@ class SARSA(environmentFabric:() => Option[Environment], episodeBound:Int, burnI
           if(episodeCount % 10 == 0)
             logger.info(s"Episode $episodeCount")
 
-          if (episodeCount % 1000 == 0 && episodeCount > 1){
+          if (episodeCount % 10 == 0 && episodeCount > 1){
             policy.save(Some(s"model_${episodeCount}.pt"), s"partial_policy_${episodeCount}.json")
           }
 

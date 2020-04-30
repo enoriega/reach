@@ -1,6 +1,9 @@
 package org.clulab.reach.focusedreading.agents
 
+import com.typesafe.config.ConfigFactory
 import com.typesafe.scalalogging.LazyLogging
+
+import scala.util.Random
 import org.clulab.processors.bionlp.BioNLPProcessor
 import org.clulab.reach.focusedreading.FillBlanks.logger
 import org.clulab.reach.focusedreading.ie.{REACHIEStrategy, SQLIteIEStrategy}
@@ -24,7 +27,6 @@ class LuceneReachSearchAgent(participantA:Participant, participantB:Participant)
   with LuceneIRStrategy
   with REACHIEStrategy {
 
-
   //override val model:Model = Graph[Participant, LDiEdge](participantA, participantB) // Directed graph with the model.
   override val model:SearchModel = new GFSModel(participantA, participantB) // Directed graph with the model.
 
@@ -42,15 +44,37 @@ class SQLiteSearchAgent(participantA:Participant, participantB:Participant) exte
   with SQLIRStrategy
   with SQLIteIEStrategy {
 
+  val conf = ConfigFactory.load()
+
 
 //  override val model:Model = Graph[Participant, LDiEdge](participantA, participantB) // Directed graph with the model.
   override val model:SearchModel = new GFSModel(participantA, participantB) // Directed graph with the model.
 
 
 
+//  override def choseQuery(source: Participant,
+//                          destination: Participant,
+//                          model: SearchModel) = Query(Cascade, source, Some(destination))
+
+  val random = new Random
+  // TODO make a random policy choice here
   override def choseQuery(source: Participant,
                           destination: Participant,
-                          model: SearchModel) = Query(Cascade, source, Some(destination))
+                          model: SearchModel): Query = {
+    // Chose randomly between exploration and exploitation
+
+    // Get the weight for the explore action (disjunction
+    val exploreWeight = conf.getDouble("DyCE.Random.exploreWeight")
+
+    // Build the array for a weighted sample
+    val queryTypes = Array.fill((exploreWeight*100).toInt)(Disjunction) ++
+                      Array.fill(100 - (exploreWeight*100).toInt)(Conjunction)
+
+//    val queryTypes = Seq(Conjunction, Disjunction)
+    val ix = random.nextInt(queryTypes.size)
+    val chosenType = queryTypes(ix)
+    Query(chosenType, source, Some(destination))
+  }
 
 }
 

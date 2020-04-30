@@ -6,6 +6,7 @@ import org.clulab.reach.focusedreading.agents._
 import java.io.{BufferedWriter, File, FileWriter}
 import java.nio.file.Paths
 
+import com.typesafe.config.ConfigFactory
 import org.json4s.JsonDSL._
 import org.json4s._
 
@@ -21,6 +22,8 @@ import scala.collection.mutable
   */
 object SimplePath extends App with LazyLogging{
 
+  val conf = ConfigFactory.load()
+  val inputPath = conf.getString("DyCE.Testing.file")
 
     def getParticipants(path:List[Connection]):List[String] = {
       path match {
@@ -53,7 +56,7 @@ object SimplePath extends App with LazyLogging{
     }
 
     // The first argument is the input file
-    val dataSet:Iterable[Seq[String]] = io.Source.fromFile(args(0)).getLines
+    val dataSet:Iterable[Seq[String]] = io.Source.fromFile(inputPath).getLines
       .map{
         s =>
           val t = s.split("\t").toSeq
