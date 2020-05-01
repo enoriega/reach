@@ -32,12 +32,11 @@ for ix, (training_path, testing_path) in enumerate(zip(TRAINING_FILES, TESTING_F
     os.system(training_cmd)
     os.system(testing_cmd)
     for episode, partial_policy_file in tqdm(enumerate(glob("partial_policy*.json"))):
-        if episode >= 83:
-            episode *= 10
-            partial_testing_output = f"partial_testing_output{ix}_{episode}.txt"
-            with open(partial_testing_output, 'w') as pftest:
-                partial_testing_cmd = f"sbt -J-Xmx12g -DDyCE.Testing.file={testing_path} -DDyCE.Testing.policyFile={partial_policy_file} \"runMain org.clulab.reach.focusedreading.executable.SimplePathRL\""
-                pftest.write(os.popen(partial_testing_cmd).read())
+        episode *= 10
+        partial_testing_output = f"partial_testing_output{ix}_{episode}.txt"
+        with open(partial_testing_output, 'w') as pftest:
+            partial_testing_cmd = f"sbt -J-Xmx12g -DDyCE.Testing.file={testing_path} -DDyCE.Testing.policyFile={partial_policy_file} \"runMain org.clulab.reach.focusedreading.executable.SimplePathRL\""
+            pftest.write(os.popen(partial_testing_cmd).read())
             # print(partial_testing_cmd)
     print()
 
