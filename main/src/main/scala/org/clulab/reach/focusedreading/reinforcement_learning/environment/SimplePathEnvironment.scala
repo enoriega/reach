@@ -18,6 +18,7 @@ class SimplePathEnvironment(participantA:Participant, participantB:Participant) 
   val agent = new SQLiteSearchAgent(participantA, participantB)
   val queryLog = new mutable.ArrayBuffer[(Participant, Participant)]
   val introductions = new mutable.HashMap[Participant, Int]
+  val papersRead = new mutable.HashSet[String]()
 
   introductions += participantA -> 0
   introductions += participantB -> 0
@@ -30,23 +31,23 @@ class SimplePathEnvironment(participantA:Participant, participantB:Participant) 
       iterationNum += 1
 
     // UNCOMMENT for deterministic endpoint choosing
-    val (a, b) = agent.choseEndPoints(participantA, participantB, agent.triedPairs.toSet, agent.model)
+//    val (a, b) = agent.choseEndPoints(participantA, participantB, agent.triedPairs.toSet, agent.model)
     ///////
 
-    // UNCOMMENT for policy selected endpoint choosing
-//    val exploitChooser = new {} with MostConnectedAndRecentParticipantsStrategy {
-//      override val participantIntroductions = introductions
-//    }
-//    val exploreChooser = new {} with MostConnectedParticipantsStrategy {}
-//
-//    val selectedChooser = action match {
-//      case Actions.Conjunction =>
-//        exploitChooser
-//      case Actions.Disjunction =>
-//        exploreChooser
-//    }
-//
-//    val (a, b) = selectedChooser.choseEndPoints(participantA, participantB, agent.triedPairs.toSet, agent.model)
+//     UNCOMMENT for policy selected endpoint choosing
+    val exploitChooser = new {} with MostConnectedAndRecentParticipantsStrategy {
+      override val participantIntroductions = introductions
+    }
+    val exploreChooser = new {} with MostConnectedParticipantsStrategy {}
+
+    val selectedChooser = action match {
+      case Actions.Conjunction =>
+        exploitChooser
+      case Actions.Disjunction =>
+        exploreChooser
+    }
+
+    val (a, b) = selectedChooser.choseEndPoints(participantA, participantB, agent.triedPairs.toSet, agent.model)
     ////////
 
     if(persist){
@@ -66,6 +67,8 @@ class SimplePathEnvironment(participantA:Participant, participantB:Participant) 
     }
 
     val paperIds = agent.informationRetrival(query)
+
+    papersRead ++= paperIds
 
     val findings = agent.informationExtraction(paperIds)
 
@@ -93,12 +96,13 @@ class SimplePathEnvironment(participantA:Participant, participantB:Participant) 
     // Return the observed reward
     if(!agent.hasFinished(participantA, participantB, agent.model)){
       // If this episode hasn't finished
-      -0.05
+//      -0.05
+      0.0
     }
     else{
       // If finished successfuly
       agent.successStopCondition(participantA, participantB, agent.model) match{
-        case Some(p) => 1.0
+        case Some(p) => 1.0//1.0 - papersRead.size
         case None => -1.0
       }
     }

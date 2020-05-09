@@ -62,28 +62,6 @@ object LinearSARSA extends App with LazyLogging {
   val architecture = conf.getString("DyCE.architecture")
 
   // The first argument is the input file
-  // The first argument is the input file
-//  val dataSet:Iterator[Tuple2[String, String]] = Iterator.continually(io.Source.fromFile(inputPath).getLines
-//    .map{
-//      s =>
-//        val t = s.split("\t").toSeq
-//        //(t(0), t(1), t(2))
-//        (t.head, t.last)
-//    }
-//  ).flatten
-//
-//  def focusedReadingFabric():Option[Environment] = {
-//    if(dataSet.hasNext){
-//      val episode = dataSet.next
-//      val participantA = Participant("", episode._1)
-//      val participantB = Participant("", episode._2)
-//
-//      Some(new SimplePathEnvironment(participantA, participantB))
-//    }
-//    else
-//      None
-//  }
-
   val dataSet:List[Tuple2[String, String]] = io.Source.fromFile(inputPath).getLines.toList
     .map{
       s =>
@@ -111,7 +89,7 @@ object LinearSARSA extends App with LazyLogging {
   }
 
   val episodeBound = 1000
-  val policyIteration = new SARSA(focusedReadingFabric, episodeBound, episodeBound)
+  val policyIteration = new SARSA(focusedReadingFabric, 3000, 100, alpha = 0.001)
   val qFunction = new ProxyValues(endPoint, architecture)
 //  val qFunction = new LinearApproximationValues()
   val first_epsilon = 1.0
@@ -123,58 +101,7 @@ object LinearSARSA extends App with LazyLogging {
   val learntPolicy = policyIteration.iteratePolicy(initialPolicy)
 
   // Store the policy somewhere
-  // Serializer.save(learntPolicy, "learnt_policy.ser")
   learntPolicy.save(jsonPath)
-
-  /*
-//  val f = Figure()
-//  val p = f.subplot(0)
-//  val x = linspace(0.0, policyIteration.controlCount.toDouble, policyIteration.controlCount)
-//
-//  val num = qFunction.coefficientsExplore.size
-//  val names = qFunction.coefficientsExplore.keySet.toSeq.sorted
-//  for(i <- 0 until num) {
-//    val history = DenseVector(qFunction.coefficientMemoryExplore.map {
-//      v =>
-//        if(v.length == 0)
-//          0.0
-//        else
-//          v(i)
-//    }.toArray)
-//
-//    p += plot(x, history, '-', null, names(i))
-//  }
-
-//  p.legend = true
-//  p.xlabel = "Update #"
-//  p.ylabel = "Coef Explore value"
-//
-//  f.saveas("plot_explore.png")
-
-//  val f2 = Figure()
-//  val p2 = f.subplot(0)
-//  val x2= linspace(0.0, policyIteration.controlCount.toDouble, policyIteration.controlCount)
-//
-//  val num2 = qFunction.coefficientsExploit.size
-//  val names2 = qFunction.coefficientsExploit.keySet.toSeq.sorted
-//  for(i <- 0 until num2) {
-//    val history = DenseVector(qFunction.coefficientMemoryExploit.map {
-//      v =>
-//        if(v.length == 0)
-//          0.0
-//        else
-//          v(i)
-//    }.toArray)
-//
-//    p2 += plot(x2, history, '-', null, names(i))
-//  }
-//
-//  p2.legend = true
-//  p2.xlabel = "Update #"
-//  p2.ylabel = "Coef Exploit value"
-//
-//  f2.saveas("plot_exploit.png")
-*/
 
 }
 

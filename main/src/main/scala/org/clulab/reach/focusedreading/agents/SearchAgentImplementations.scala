@@ -1,5 +1,7 @@
 package org.clulab.reach.focusedreading.agents
 
+import java.io.File
+
 import com.typesafe.config.ConfigFactory
 import com.typesafe.scalalogging.LazyLogging
 
@@ -15,6 +17,7 @@ import org.clulab.reach.focusedreading.reinforcement_learning.states._
 import org.clulab.reach.focusedreading.reinforcement_learning.policies.Policy
 import org.clulab.reach.focusedreading.{Connection, ExploreExploitParticipantsStrategy, MostConnectedParticipantsStrategy, Participant}
 import org.clulab.reach.grounding.ReachKBUtils
+import org.clulab.utils.Serializer
 
 import scala.collection.mutable
 import scala.io.Source
@@ -232,8 +235,9 @@ class PolicySearchAgent(participantA:Participant, participantB:Participant, val 
 
 }
 
-object PolicySearchAgent{
+object PolicySearchAgent extends LazyLogging{
 
+  val disableEmbeddings = ConfigFactory.load().getBoolean("DyCE.disableEmbeddigs")
   val processor = new BioNLPProcessor(withChunks=false, withCRFNER=false, withRuleNER=false, withContext=false)
   val vocLines = Source.fromFile("pubmedix.txt").getLines().toList
   val vocIx:Map[String, Int] = vocLines.map{
@@ -242,43 +246,63 @@ object PolicySearchAgent{
       t.head -> t.last.toInt
   }.toMap
 
-//  logger.info("Loading KBs...")
-  var lines = ReachKBUtils.sourceFromResource(ReachKBUtils.makePathInKBDir("uniprot-proteins.tsv.gz")).getLines.toSeq
-  lines ++= ReachKBUtils.sourceFromResource(ReachKBUtils.makePathInKBDir("GO-subcellular-locations.tsv.gz")).getLines.toSeq
-  lines ++= ReachKBUtils.sourceFromResource(ReachKBUtils.makePathInKBDir("ProteinFamilies.tsv.gz")).getLines.toSeq
-  lines ++= ReachKBUtils.sourceFromResource(ReachKBUtils.makePathInKBDir("PubChem.tsv.gz")).getLines.toSeq
-  lines ++= ReachKBUtils.sourceFromResource(ReachKBUtils.makePathInKBDir("PFAM-families.tsv.gz")).getLines.toSeq
-  lines ++= ReachKBUtils.sourceFromResource(ReachKBUtils.makePathInKBDir("bio_process.tsv.gz")).getLines.toSeq
-  lines ++= ReachKBUtils.sourceFromResource(ReachKBUtils.makePathInKBDir("ProteinFamilies.tsv.gz")).getLines.toSeq
-  lines ++= ReachKBUtils.sourceFromResource(ReachKBUtils.makePathInKBDir("hgnc.tsv.gz")).getLines.toSeq
+  private def loadGroundings: Map[String, Seq[String]] = {
+    val file = new File("groundings.ser")
+    if(file.exists()) {
+      logger.info("Loading groundings.ser ...")
+      val r = Serializer.load[Map[String, Seq[String]]](filename = file.getAbsolutePath())
+      logger.info("Finished loading groundings.ser ...")
+      r
+    }
+    else {
+      //  logger.info("Loading KBs...")
+      var lines = ReachKBUtils.sourceFromResource(ReachKBUtils.makePathInKBDir("uniprot-proteins.tsv.gz")).getLines.toSeq
+      lines ++= ReachKBUtils.sourceFromResource(ReachKBUtils.makePathInKBDir("GO-subcellular-locations.tsv.gz")).getLines.toSeq
+      lines ++= ReachKBUtils.sourceFromResource(ReachKBUtils.makePathInKBDir("ProteinFamilies.tsv.gz")).getLines.toSeq
+      lines ++= ReachKBUtils.sourceFromResource(ReachKBUtils.makePathInKBDir("PubChem.tsv.gz")).getLines.toSeq
+      lines ++= ReachKBUtils.sourceFromResource(ReachKBUtils.makePathInKBDir("PFAM-families.tsv.gz")).getLines.toSeq
+      lines ++= ReachKBUtils.sourceFromResource(ReachKBUtils.makePathInKBDir("bio_process.tsv.gz")).getLines.toSeq
+      lines ++= ReachKBUtils.sourceFromResource(ReachKBUtils.makePathInKBDir("ProteinFamilies.tsv.gz")).getLines.toSeq
+      lines ++= ReachKBUtils.sourceFromResource(ReachKBUtils.makePathInKBDir("hgnc.tsv.gz")).getLines.toSeq
 
-  val dict: Map[String, Seq[String]] = lines.map{ l => val t = l.split("\t"); (t(1), t(0)) }.groupBy(t=> t._1).mapValues(l => l.map(_._2).distinct)
+      val dict: Map[String, Seq[String]] = lines.map { l => val t = l.split("\t"); (t(1), t(0)) }.groupBy(t => t._1).mapValues(l => l.map(_._2).distinct)
+      Serializer.save(dict.map(identity), file.getAbsolutePath)
+      dict
+    }
+  }
+
+
+  val dict: Map[String, Seq[String]] = if(!disableEmbeddings) loadGroundings else Map[String, Seq[String]]()
 
   val lemmasCache = new mutable.WeakHashMap[Participant, Seq[Seq[Int]]]//new mutable.HashMap[Participant, Seq[Seq[Int]]]
 
   def getParticipantLemmas(participant: Participant):Seq[Seq[Int]] = {
-    if(lemmasCache.contains(participant))
-      lemmasCache(participant)
-    else {
-      val synonyms = dict.get(participant.id)
-      val ret =
-        (synonyms match {
-          case Some(syns) =>
-            val doc = processor.annotateFromSentences(syns)
-            val indices =
-              for (sen <- doc.sentences) yield {
-                val lemmas = sen.lemmas.get
-                lemmas.map(vocIx.lift).collect { case Some(i) => i }.toSeq
-              }
-            indices.toSeq filter (_.nonEmpty)
-          case None =>
-            Seq.empty[Seq[Int]]
-        })
-
-      lemmasCache += (participant -> ret)
-      ret
+    if(disableEmbeddings){
+      Seq.empty
     }
+    else {
+      if (lemmasCache.contains(participant))
+        lemmasCache(participant)
+      else {
+        val synonyms = dict.get(participant.id)
+        val ret =
+          (synonyms match {
+            case Some(syns) =>
+              val doc = processor.annotateFromSentences(syns)
+              val indices =
+                for (sen <- doc.sentences) yield {
+                  val lemmas = sen.lemmas.get
+                  lemmas.map(vocIx.lift).collect { case Some(i) => i }.toSeq
+                }
+              indices.toSeq filter (_.nonEmpty)
+            case None =>
+              Seq.empty[Seq[Int]]
+          })
 
+        lemmasCache += (participant -> ret)
+        ret
+      }
+    }
   }
 }
 

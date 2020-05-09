@@ -34,7 +34,7 @@ trait SQLIteIEStrategy extends IEStrategy{
         new Connection(Participant("", c._1), Participant("", c._2), c._3, c._5)
     }
 
-    connections
+    connections filter { c => !c.controller.id.contains("UA") && !c.controlled.id.contains("UA")}
   }
 
 

@@ -45,6 +45,11 @@ trait SearchAgent extends LazyLogging with IRStrategy with IEStrategy with Parti
       else
         logger.info(s"Empty query $query")
       val findings = informationExtraction(paperIds)
+      for(f <- findings){
+        if(f.controller.id.startsWith("UA") || f.controlled.id.startsWith("UA")) {
+          val x = 0
+        }
+      }
       logger.info(s"Found ${findings.size} connections")
 
       val modelGraphBefore = getStateGraph
@@ -117,10 +122,10 @@ abstract class SimplePathAgent(participantA:Participant, participantB:Participan
                                     model: SearchModel) = {
     if(this.iterationNum >= 10)
       true
-    else if(iterationNum > 0 && (nodesCount, edgesCount) == (prevNodesCount, prevEdgesCount)){
-      logger.info("The model didn't change.")
-      true
-    }
+//    else if(iterationNum > 0 && (nodesCount, edgesCount) == (prevNodesCount, prevEdgesCount)){
+//      logger.info("The model didn't change.")
+//      true
+//    }
     else
       false
   }

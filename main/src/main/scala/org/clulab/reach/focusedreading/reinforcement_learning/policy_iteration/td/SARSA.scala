@@ -20,6 +20,7 @@ class SARSA(environmentFabric:() => Option[Environment], episodeBound:Int, burnI
 
   val alphaDecrease = alpha/episodeBound
   val alphas = (0 to episodeBound).toStream.map(i => alpha-(i*alphaDecrease)).iterator
+  var changes:List[Boolean] = Nil
 
 
   def iteratePolicy(policy:EpGreedyPolicy):Policy = {
@@ -70,11 +71,15 @@ class SARSA(environmentFabric:() => Option[Environment], episodeBound:Int, burnI
               case _ => ()
             }
 
+            changes = changed::changes
 
 
             // Keep track of the fluctuations of the values
-            if(changed)
+            if(changes.size < 10 || changes.take(10).contains(true))
               stable = false
+            else {
+              val x = 1
+            }
 
 
             // Update the state and action
