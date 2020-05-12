@@ -60,6 +60,10 @@ object LinearSARSA extends App with LazyLogging {
   val jsonPath = conf.getString("DyCE.Training.policyFile")
   val endPoint = conf.getString("DyCE.endpoint")
   val architecture = conf.getString("DyCE.architecture")
+  val epsilon = conf.getDouble("DyCE.Training.epsilon")
+  val epochs= conf.getInt("DyCE.Training.epochs")
+  val lr = conf.getDouble("DyCE.Training.lr")
+  val burn_in = conf.getInt("DyCE.Training.burn_in")
 
   // The first argument is the input file
   val dataSet:List[Tuple2[String, String]] = io.Source.fromFile(inputPath).getLines.toList
@@ -88,11 +92,11 @@ object LinearSARSA extends App with LazyLogging {
 
   }
 
-  val episodeBound = 1000
-  val policyIteration = new SARSA(focusedReadingFabric, 3000, 100, alpha = 0.001)
+  val episodeBound = epochs
+  val policyIteration = new SARSA(focusedReadingFabric, episodeBound, burn_in, alpha = lr)
   val qFunction = new ProxyValues(endPoint, architecture)
 //  val qFunction = new LinearApproximationValues()
-  val first_epsilon = 1.0
+  val first_epsilon = epsilon
   val epsilonDecrease = first_epsilon/(episodeBound/2)
   val epsilons = ((0 to (episodeBound/2)).toStream.map(i => first_epsilon - (i*epsilonDecrease)).iterator) ++ Stream.continually(0.0)
 
