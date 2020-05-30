@@ -5,6 +5,7 @@ import com.typesafe.scalalogging.LazyLogging
 import org.clulab.reach.focusedreading.reinforcement_learning.environment._
 import org.clulab.reach.focusedreading.reinforcement_learning.Actions
 
+import scala.collection.mutable
 import scala.collection.mutable.ListBuffer
 
 
@@ -21,6 +22,7 @@ class SARSA(environmentFabric:() => Option[Environment], episodeBound:Int, burnI
   val alphaDecrease = alpha/episodeBound
   val alphas = (0 to episodeBound).toStream.map(i => alpha-(i*alphaDecrease)).iterator
   var changes:List[Boolean] = Nil
+  var observedRewards = mutable.ArrayBuffer[mutable.ArrayBuffer[Double]]()
 
 
   def iteratePolicy(policy:EpGreedyPolicy):Policy = {
@@ -37,6 +39,8 @@ class SARSA(environmentFabric:() => Option[Environment], episodeBound:Int, burnI
       episode match {
         case Some(environment) =>
 
+          val localRewards = new mutable.ArrayBuffer[Double]()
+
           val currentAlpha = alphas.next
 
           // Observe the initial state
@@ -49,6 +53,7 @@ class SARSA(environmentFabric:() => Option[Environment], episodeBound:Int, burnI
           while(!environment.finishedEpisode){
             // Execute chosen action and observe reward
             val reward = environment.executePolicy(currentAction)
+            localRewards += reward
 
             // Observe the new state after executing the action
             val nextState = environment.observeState
@@ -91,6 +96,7 @@ class SARSA(environmentFabric:() => Option[Environment], episodeBound:Int, burnI
           }
 
           episodeCount += 1
+          observedRewards += localRewards
 
           if(episodeCount % 10 == 0)
             logger.info(s"Episode $episodeCount")

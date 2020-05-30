@@ -1,5 +1,7 @@
 package org.clulab.reach.focusedreading.reinforcement_learning.exec.focused_reading
 
+import java.io.PrintWriter
+
 import breeze.linalg.{DenseVector, linspace}
 import breeze.plot.{Figure, plot}
 import com.typesafe.config.ConfigFactory
@@ -9,6 +11,8 @@ import org.clulab.reach.focusedreading.reinforcement_learning.environment.{Envir
 import org.clulab.reach.focusedreading.reinforcement_learning.policies.{EpGreedyPolicy, LinearApproximationValues, ProxyValues, TabularValues}
 import org.clulab.reach.focusedreading.reinforcement_learning.policy_iteration.td.{DQN, SARSA}
 import org.clulab.reach.focusedreading.reinforcement_learning.Actions
+
+import scala.collection.mutable
 
 /**
   * Created by enrique on 31/03/17.
@@ -64,6 +68,7 @@ object LinearSARSA extends App with LazyLogging {
   val epochs= conf.getInt("DyCE.Training.epochs")
   val lr = conf.getDouble("DyCE.Training.lr")
   val burn_in = conf.getInt("DyCE.Training.burn_in")
+  val epochRewards = new mutable.ArrayBuffer[mutable.ArrayBuffer[mutable.ArrayBuffer[Double]]]()
 
   // The first argument is the input file
   val dataSet:List[Tuple2[String, String]] = io.Source.fromFile(inputPath).getLines.toList
@@ -81,6 +86,8 @@ object LinearSARSA extends App with LazyLogging {
     if(dataSetIterator.isEmpty) {
       logger.info(s"Finished epoch of ${dataSet.size} instances")
       dataSetIterator = dataSet.iterator
+      epochRewards += policyIteration.observedRewards
+      policyIteration.observedRewards = new mutable.ArrayBuffer[mutable.ArrayBuffer[Double]]()
     }
 
     val episode = dataSetIterator.next
@@ -88,8 +95,6 @@ object LinearSARSA extends App with LazyLogging {
     val participantB = Participant("", episode._2)
 
     Some(new SimplePathEnvironment(participantA, participantB))
-
-
   }
 
   val episodeBound = epochs
@@ -103,6 +108,22 @@ object LinearSARSA extends App with LazyLogging {
   val initialPolicy = new EpGreedyPolicy(epsilons, qFunction)
 
   val learntPolicy = policyIteration.iteratePolicy(initialPolicy)
+
+  // Fetch the observed rewards
+  def mk_reward_strings() = {
+    epochRewards.map{
+      episodesRewards =>
+        episodesRewards.map{
+          episodeRewards =>
+            episodeRewards.mkString(" ") + "\n"
+        }.mkString("")
+    }.mkString("\n")
+  }
+
+  val pw = new PrintWriter("epoch_rewards.txt")
+  val line = mk_reward_strings()
+  pw.write(line)
+  pw.close()
 
   // Store the policy somewhere
   learntPolicy.save(jsonPath)
