@@ -120,7 +120,7 @@ object LinearSARSA extends App with LazyLogging {
     }.mkString("\n")
   }
 
-  val pw = new PrintWriter("epoch_rewards.txt")
+  val pw = new PrintWriter(conf.getString("DyCE.Training.cumRewardsFile"))
   val line = mk_reward_strings()
   pw.write(line)
   pw.close()
