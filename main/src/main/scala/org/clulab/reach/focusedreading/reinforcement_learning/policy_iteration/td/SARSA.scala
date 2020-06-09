@@ -23,14 +23,20 @@ class SARSA(environmentFabric:() => Option[Environment], episodeBound:Int, burnI
   val alphas = (0 to episodeBound).toStream.map(i => alpha-(i*alphaDecrease)).iterator
   var changes:List[Boolean] = Nil
   var observedRewards = mutable.ArrayBuffer[mutable.ArrayBuffer[Double]]()
+  var currentlyIteratedPolicy:Option[EpGreedyPolicy] = None
+
+  def getGreedyPolicy:Option[GreedyPolicy] =  currentlyIteratedPolicy  match {
+    case Some(policy) => Some(policy.makeGreedy)
+    case None => None
+  }
 
 
   def iteratePolicy(policy:EpGreedyPolicy):Policy = {
 
-
     // Initialize the policy we will learn online
     //val policy = new EpGreedyPolicy(.05)
 
+    currentlyIteratedPolicy = Some(policy)
     var episode = environmentFabric()
 
     do {

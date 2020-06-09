@@ -108,6 +108,7 @@ class PolicySearchAgent(participantA:Participant, participantB:Participant, val 
 
   val queryLog = new mutable.ArrayBuffer[(Participant, Participant)]
   val introductions = new mutable.HashMap[Participant, Int]
+  val observedRewards = new mutable.ArrayBuffer[Double]()
 
   introductions += participantA -> 0
   introductions += participantB -> 0

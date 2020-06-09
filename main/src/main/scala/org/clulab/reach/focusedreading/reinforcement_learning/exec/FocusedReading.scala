@@ -7,6 +7,7 @@ import breeze.plot.{Figure, plot}
 import com.typesafe.config.ConfigFactory
 import com.typesafe.scalalogging.LazyLogging
 import org.clulab.reach.focusedreading.Participant
+import org.clulab.reach.focusedreading.agents.PolicySearchAgent
 import org.clulab.reach.focusedreading.reinforcement_learning.environment.{Environment, SimplePathEnvironment}
 import org.clulab.reach.focusedreading.reinforcement_learning.policies.{EpGreedyPolicy, LinearApproximationValues, ProxyValues, TabularValues}
 import org.clulab.reach.focusedreading.reinforcement_learning.policy_iteration.td.{DQN, SARSA}
@@ -69,6 +70,7 @@ object LinearSARSA extends App with LazyLogging {
   val lr = conf.getDouble("DyCE.Training.lr")
   val burn_in = conf.getInt("DyCE.Training.burn_in")
   val epochRewards = new mutable.ArrayBuffer[mutable.ArrayBuffer[mutable.ArrayBuffer[Double]]]()
+  val epochGreedyRewards = new mutable.ArrayBuffer[mutable.ArrayBuffer[mutable.ArrayBuffer[Double]]]()
 
   // The first argument is the input file
   val dataSet:List[Tuple2[String, String]] = io.Source.fromFile(inputPath).getLines.toList
@@ -88,6 +90,49 @@ object LinearSARSA extends App with LazyLogging {
       dataSetIterator = dataSet.iterator
       epochRewards += policyIteration.observedRewards
       policyIteration.observedRewards = new mutable.ArrayBuffer[mutable.ArrayBuffer[Double]]()
+      val currentGreedyRewards = new mutable.ArrayBuffer[mutable.ArrayBuffer[Double]]()
+      logger.info(s"Doing greedy policy on the training set")
+      val greedyPolicy = policyIteration.getGreedyPolicy.get
+      for((pa, pb) <- dataSet){
+
+        val participantA =  Participant("", pa)
+        val participantB = Participant("", pb)
+
+
+        val env = new SimplePathEnvironment(participantA, participantB)
+
+        val localRewards = new mutable.ArrayBuffer[Double]()
+
+        //val currentAlpha = alphas.next
+
+        // Observe the initial state
+        var currentState = env.observeState
+
+        // Evaluate the policy
+        var currentAction = greedyPolicy.selectAction(currentState)
+
+        // Enter into the episode loop
+        while(!env.finishedEpisode){
+          // Execute chosen action and observe reward
+          val reward = env.executePolicy(currentAction)
+          localRewards += reward
+
+//          // Observe the new state after executing the action
+//          val nextState = env.observeState
+//
+//          // Chose a new action
+//          val nextAction = greedyPolicy.selectAction(nextState)
+
+
+
+          // Update the state and action
+//          currentState = nextState
+//          currentAction = nextAction
+        }
+
+        currentGreedyRewards += localRewards
+      }
+      epochGreedyRewards += currentGreedyRewards
     }
 
     val episode = dataSetIterator.next
@@ -120,10 +165,27 @@ object LinearSARSA extends App with LazyLogging {
     }.mkString("\n")
   }
 
+  // Fetch the observed rewards
+  def mk_greedy_reward_strings() = {
+    epochGreedyRewards.map{
+      episodesRewards =>
+        episodesRewards.map{
+          episodeRewards =>
+            episodeRewards.mkString(" ") + "\n"
+        }.mkString("")
+    }.mkString("\n")
+  }
+
   val pw = new PrintWriter(conf.getString("DyCE.Training.cumRewardsFile"))
   val line = mk_reward_strings()
+
   pw.write(line)
   pw.close()
+
+  val pw2 = new PrintWriter(conf.getString("DyCE.Training.cumRewardsFile") + "_greedy")
+  val line2 = mk_greedy_reward_strings()
+  pw2.write(line2)
+  pw2.close()
 
   // Store the policy somewhere
   learntPolicy.save(jsonPath)
