@@ -207,6 +207,17 @@ object LinearSARSA extends App with LazyLogging {
     }.mkString("\n")
   }
 
+  // Fetch the observed rewards
+  def mk_greedy_testing_reward_strings() = {
+    epochTestingGreedyRewards.map{
+      episodesRewards =>
+        episodesRewards.map{
+          episodeRewards =>
+            episodeRewards.mkString(" ") + "\n"
+        }.mkString("")
+    }.mkString("\n")
+  }
+
   val pw = new PrintWriter(conf.getString("DyCE.Training.cumRewardsFile"))
   val line = mk_reward_strings()
 
@@ -219,7 +230,7 @@ object LinearSARSA extends App with LazyLogging {
   pw2.close()
 
   val pw3 = new PrintWriter(conf.getString("DyCE.Training.cumRewardsFile") + "_testing_greedy")
-  val line3 = mk_greedy_reward_strings()
+  val line3 = mk_greedy_testing_reward_strings()
   pw3.write(line3)
   pw3.close()
 
