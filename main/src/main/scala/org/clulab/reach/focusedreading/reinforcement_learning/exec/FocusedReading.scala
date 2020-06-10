@@ -162,7 +162,7 @@ object LinearSARSA extends App with LazyLogging {
 
         currentTestingGreedyRewards += localRewards
       }
-      epochTestingGreedyRewards += currentGreedyRewards
+      epochTestingGreedyRewards += currentTestingGreedyRewards
       //////////////////////////////////////////
     }
 
