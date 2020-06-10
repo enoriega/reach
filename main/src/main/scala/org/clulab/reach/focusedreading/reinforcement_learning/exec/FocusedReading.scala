@@ -62,6 +62,7 @@ object LinearSARSA extends App with LazyLogging {
 
   val conf = ConfigFactory.load()
   val inputPath = conf.getString("DyCE.Training.file")
+  val testingPath = conf.getString("DyCE.Testing.file")
   val jsonPath = conf.getString("DyCE.Training.policyFile")
   val endPoint = conf.getString("DyCE.endpoint")
   val architecture = conf.getString("DyCE.architecture")
@@ -71,9 +72,18 @@ object LinearSARSA extends App with LazyLogging {
   val burn_in = conf.getInt("DyCE.Training.burn_in")
   val epochRewards = new mutable.ArrayBuffer[mutable.ArrayBuffer[mutable.ArrayBuffer[Double]]]()
   val epochGreedyRewards = new mutable.ArrayBuffer[mutable.ArrayBuffer[mutable.ArrayBuffer[Double]]]()
+  val epochTestingGreedyRewards = new mutable.ArrayBuffer[mutable.ArrayBuffer[mutable.ArrayBuffer[Double]]]()
 
   // The first argument is the input file
-  val dataSet:List[Tuple2[String, String]] = io.Source.fromFile(inputPath).getLines.toList
+  val dataSet:List[(String, String)] = io.Source.fromFile(inputPath).getLines.toList
+    .map{
+      s =>
+        val t = s.split("\t").toSeq
+        //(t(0), t(1), t(2))
+        (t.head, t.last)
+    }
+
+  val testingDataSet:List[(String, String)] = io.Source.fromFile(testingPath).getLines().toList
     .map{
       s =>
         val t = s.split("\t").toSeq
@@ -91,8 +101,11 @@ object LinearSARSA extends App with LazyLogging {
       epochRewards += policyIteration.observedRewards
       policyIteration.observedRewards = new mutable.ArrayBuffer[mutable.ArrayBuffer[Double]]()
       val currentGreedyRewards = new mutable.ArrayBuffer[mutable.ArrayBuffer[Double]]()
+      val currentTestingGreedyRewards = new mutable.ArrayBuffer[mutable.ArrayBuffer[Double]]()
       logger.info(s"Doing greedy policy on the training set")
       val greedyPolicy = policyIteration.getGreedyPolicy.get
+
+      // Do it for the training set
       for((pa, pb) <- dataSet){
 
         val participantA =  Participant("", pa)
@@ -103,36 +116,54 @@ object LinearSARSA extends App with LazyLogging {
 
         val localRewards = new mutable.ArrayBuffer[Double]()
 
-        //val currentAlpha = alphas.next
 
         // Observe the initial state
-        var currentState = env.observeState
+        val currentState = env.observeState
 
         // Evaluate the policy
-        var currentAction = greedyPolicy.selectAction(currentState)
+        val currentAction = greedyPolicy.selectAction(currentState)
 
         // Enter into the episode loop
         while(!env.finishedEpisode){
           // Execute chosen action and observe reward
           val reward = env.executePolicy(currentAction)
           localRewards += reward
-
-//          // Observe the new state after executing the action
-//          val nextState = env.observeState
-//
-//          // Chose a new action
-//          val nextAction = greedyPolicy.selectAction(nextState)
-
-
-
-          // Update the state and action
-//          currentState = nextState
-//          currentAction = nextAction
         }
 
         currentGreedyRewards += localRewards
       }
       epochGreedyRewards += currentGreedyRewards
+      //////////////////////////////////////////
+
+      // Do it for the training set
+      for((pa, pb) <- testingDataSet){
+
+        val participantA =  Participant("", pa)
+        val participantB = Participant("", pb)
+
+
+        val env = new SimplePathEnvironment(participantA, participantB)
+
+        val localRewards = new mutable.ArrayBuffer[Double]()
+
+
+        // Observe the initial state
+        val currentState = env.observeState
+
+        // Evaluate the policy
+        val currentAction = greedyPolicy.selectAction(currentState)
+
+        // Enter into the episode loop
+        while(!env.finishedEpisode){
+          // Execute chosen action and observe reward
+          val reward = env.executePolicy(currentAction)
+          localRewards += reward
+        }
+
+        currentTestingGreedyRewards += localRewards
+      }
+      epochTestingGreedyRewards += currentGreedyRewards
+      //////////////////////////////////////////
     }
 
     val episode = dataSetIterator.next
@@ -186,6 +217,11 @@ object LinearSARSA extends App with LazyLogging {
   val line2 = mk_greedy_reward_strings()
   pw2.write(line2)
   pw2.close()
+
+  val pw3 = new PrintWriter(conf.getString("DyCE.Training.cumRewardsFile") + "_testing_greedy")
+  val line3 = mk_greedy_reward_strings()
+  pw3.write(line3)
+  pw3.close()
 
   // Store the policy somewhere
   learntPolicy.save(jsonPath)
