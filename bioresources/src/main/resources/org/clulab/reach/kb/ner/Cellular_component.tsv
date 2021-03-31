@@ -1,0 +1,4345 @@
+# Created by org.clulab.processors.bionlp.ner.KBGenerator$ on 2021/01/17 20:55:16.
+A band
+A bands
+Acidocalcisome
+Acidocalcisome lumen
+Acidocalcisome lumens
+Acidocalcisome membrane
+Acidocalcisome membranes
+Acidocalcisomes
+Apical cell membrane
+Apical cell membranes
+Apicolateral cell membrane
+Apicolateral cell membranes
+Archaeal flagellum
+Archaeal flagellums
+Bacterial flagellum
+Bacterial flagellum basal bodies
+Bacterial flagellum basal body
+Bacterial flagellum filament
+Bacterial flagellum filaments
+Bacterial flagellum hook
+Bacterial flagellum hooks
+Bacterial flagellums
+Barrier septum
+Barrier septums
+Basal cell membrane
+Basal cell membranes
+Basolateral cell membrane
+Basolateral cell membranes
+Bud
+Bud membrane
+Bud membranes
+Bud neck
+Bud necks
+Bud tip
+Bud tips
+Buds
+COPI coated vesicle
+COPI coated vesicle lumen
+COPI coated vesicle lumens
+COPI coated vesicle membrane
+COPI coated vesicle membranes
+COPI coated vesicles
+COPII coated vesicle
+COPII coated vesicle lumen
+COPII coated vesicle lumens
+COPII coated vesicle membrane
+COPII coated vesicle membranes
+COPII coated vesicles
+Cajal bodies
+Cajal body
+Carboxysome
+Carboxysomes
+Cell envelope
+Cell envelopes
+Cell inner membrane
+Cell inner membranes
+Cell junction
+Cell junctions
+Cell membrane
+Cell membranes
+Cell outer membrane
+Cell outer membranes
+Cell projection
+Cell projections
+Cell septum
+Cell septums
+Cell surface
+Cell surfaces
+Cell tip
+Cell tips
+Cellular chromatophore membrane
+Cellular chromatophore membranes
+Cellular thylakoid
+Cellular thylakoid lumen
+Cellular thylakoid lumens
+Cellular thylakoid membrane
+Cellular thylakoid membranes
+Cellular thylakoids
+Chlorosome
+Chlorosomes
+Chromosome
+Chromosomes
+Cleavage furrow
+Cleavage furrows
+Contractile vacuole
+Contractile vacuole lumen
+Contractile vacuole lumens
+Contractile vacuole membrane
+Contractile vacuole membranes
+Contractile vacuoles
+Cornified envelope
+Cornified envelopes
+Cytoplasm
+Cytoplasmic granule
+Cytoplasmic granule lumen
+Cytoplasmic granule lumens
+Cytoplasmic granule membrane
+Cytoplasmic granule membranes
+Cytoplasmic granules
+Cytoplasmic vesicle
+Cytoplasmic vesicle lumen
+Cytoplasmic vesicle lumens
+Cytoplasmic vesicle membrane
+Cytoplasmic vesicle membranes
+Cytoplasmic vesicles
+Cytoplasms
+Early endosome
+Early endosome lumen
+Early endosome lumens
+Early endosome membrane
+Early endosome membranes
+Early endosomes
+Endomembrane system
+Endomembrane systems
+Endoplasmic reticulum
+Endoplasmic reticulum lumen
+Endoplasmic reticulum lumens
+Endoplasmic reticulum membrane
+Endoplasmic reticulum membranes
+Endoplasmic reticulum-Golgi intermediate compartment
+Endoplasmic reticulum-Golgi intermediate compartment lumen
+Endoplasmic reticulum-Golgi intermediate compartment lumens
+Endoplasmic reticulum-Golgi intermediate compartment membrane
+Endoplasmic reticulum-Golgi intermediate compartment membranes
+Endoplasmic reticulum-Golgi intermediate compartments
+Endoplasmic reticulums
+Endosome
+Endosome lumen
+Endosome lumens
+Endosome membrane
+Endosome membranes
+Endosomes
+Fimbrium
+Fimbriums
+Flagellar pocket
+Flagellar pockets
+Forespore
+Forespore inner membrane
+Forespore inner membranes
+Forespore intermembrane space
+Forespore intermembrane spaces
+Forespore membrane
+Forespore membranes
+Forespore outer membrane
+Forespore outer membranes
+Forespores
+Glycosome
+Glycosome matrix
+Glycosome matrixs
+Glycosome membrane
+Glycosome membranes
+Glycosomes
+Glyoxysome
+Glyoxysome matrix
+Glyoxysome matrixs
+Glyoxysome membrane
+Glyoxysome membranes
+Glyoxysomes
+Golgi apparatus
+Golgi apparatus lumen
+Golgi apparatus lumens
+Golgi apparatus membrane
+Golgi apparatus membranes
+Golgi apparatuses
+Golgi stack
+Golgi stack lumen
+Golgi stack lumens
+Golgi stack membrane
+Golgi stack membranes
+Golgi stacks
+H zone
+H zones
+Host
+Host Golgi apparatus
+Host Golgi apparatus membrane
+Host Golgi apparatus membranes
+Host Golgi apparatuses
+Host apical cell membrane
+Host apical cell membranes
+Host basolateral cell membrane
+Host basolateral cell membranes
+Host cell
+Host cell envelope
+Host cell envelopes
+Host cell inner membrane
+Host cell inner membranes
+Host cell junction
+Host cell junctions
+Host cell membrane
+Host cell membranes
+Host cell outer membrane
+Host cell outer membranes
+Host cell projection
+Host cell projections
+Host cell surface
+Host cell surfaces
+Host cell wall
+Host cell walls
+Host cells
+Host cellular thylakoid
+Host cellular thylakoid membrane
+Host cellular thylakoid membranes
+Host cellular thylakoids
+Host chloroplast envelope
+Host chloroplast envelopes
+Host cytoplasm
+Host cytoplasmic vesicle
+Host cytoplasmic vesicle membrane
+Host cytoplasmic vesicle membranes
+Host cytoplasmic vesicles
+Host cytoplasms
+Host early endosome
+Host early endosome membrane
+Host early endosome membranes
+Host early endosomes
+Host endomembrane system
+Host endomembrane systems
+Host endoplasmic reticulum
+Host endoplasmic reticulum lumen
+Host endoplasmic reticulum lumens
+Host endoplasmic reticulum membrane
+Host endoplasmic reticulum membranes
+Host endoplasmic reticulum-Golgi intermediate compartment
+Host endoplasmic reticulum-Golgi intermediate compartment membrane
+Host endoplasmic reticulum-Golgi intermediate compartment membranes
+Host endoplasmic reticulum-Golgi intermediate compartments
+Host endoplasmic reticulums
+Host endosome
+Host endosome membrane
+Host endosome membranes
+Host endosomes
+Host extracellular space
+Host extracellular spaces
+Host glyoxysome
+Host glyoxysomes
+Host late endosome
+Host late endosome membrane
+Host late endosome membranes
+Host late endosomes
+Host lipid droplet
+Host lipid droplets
+Host lysosome
+Host lysosome membrane
+Host lysosome membranes
+Host lysosomes
+Host membrane
+Host membranes
+Host microsome
+Host microsome membrane
+Host microsome membranes
+Host microsomes
+Host mitochondrion
+Host mitochondrion envelope
+Host mitochondrion envelopes
+Host mitochondrion inner membrane
+Host mitochondrion inner membranes
+Host mitochondrion membrane
+Host mitochondrion membranes
+Host mitochondrion outer membrane
+Host mitochondrion outer membranes
+Host mitochondrions
+Host nucleus
+Host nucleus envelope
+Host nucleus envelopes
+Host nucleus inner membrane
+Host nucleus inner membranes
+Host nucleus lamina
+Host nucleus laminas
+Host nucleus matrix
+Host nucleus matrixs
+Host nucleus membrane
+Host nucleus membranes
+Host nucleus outer membrane
+Host nucleus outer membranes
+Host nucleuses
+Host periplasm
+Host periplasms
+Host peroxisome
+Host peroxisomes
+Host rough endoplasmic reticulum
+Host rough endoplasmic reticulum membrane
+Host rough endoplasmic reticulum membranes
+Host rough endoplasmic reticulums
+Host smooth endoplasmic reticulum
+Host smooth endoplasmic reticulum membrane
+Host smooth endoplasmic reticulum membranes
+Host smooth endoplasmic reticulums
+Host thylakoid
+Host thylakoids
+Hosts
+Hydrogenosome
+Hydrogenosome lumen
+Hydrogenosome lumens
+Hydrogenosome membrane
+Hydrogenosome membranes
+Hydrogenosomes
+I band
+I bands
+Inner membrane complex
+Inner membrane complexs
+Late endosome
+Late endosome lumen
+Late endosome lumens
+Late endosome membrane
+Late endosome membranes
+Late endosomes
+Lateral cell membrane
+Lateral cell membranes
+Lipid droplet
+Lipid droplets
+Lysosome
+Lysosome lumen
+Lysosome lumens
+Lysosome membrane
+Lysosome membranes
+Lysosomes
+Lytic vacuole
+Lytic vacuoles
+M line
+M lines
+Melanosome
+Melanosome lumen
+Melanosome lumens
+Melanosome membrane
+Melanosome membranes
+Melanosomes
+Membrane
+Membrane raft
+Membrane rafts
+Membranes
+Microsome
+Microsome membrane
+Microsome membranes
+Microsomes
+Midbodies
+Midbody
+Mitochondrion
+Mitochondrion envelope
+Mitochondrion envelopes
+Mitochondrion inner membrane
+Mitochondrion inner membranes
+Mitochondrion intermembrane space
+Mitochondrion intermembrane spaces
+Mitochondrion matrix
+Mitochondrion matrixs
+Mitochondrion membrane
+Mitochondrion membranes
+Mitochondrion outer membrane
+Mitochondrion outer membranes
+Mitochondrions
+Mitosome
+Mitosome envelope
+Mitosome envelopes
+Mitosome inner membrane
+Mitosome inner membranes
+Mitosome intermembrane space
+Mitosome intermembrane spaces
+Mitosome matrix
+Mitosome matrixs
+Mitosome membrane
+Mitosome membranes
+Mitosome outer membrane
+Mitosome outer membranes
+Mitosomes
+Myelin membrane
+Myelin membranes
+Nematocyst
+Nematocysts
+Nucleomorph
+Nucleomorphs
+Nucleus
+Nucleus envelope
+Nucleus envelopes
+Nucleus inner membrane
+Nucleus inner membranes
+Nucleus intermembrane space
+Nucleus intermembrane spaces
+Nucleus lamina
+Nucleus laminas
+Nucleus matrix
+Nucleus matrixs
+Nucleus membrane
+Nucleus membranes
+Nucleus outer membrane
+Nucleus outer membranes
+Nucleus speckle
+Nucleus speckles
+Nucleuses
+P-bodies
+P-body
+PML bodies
+PML body
+Parasitophorous vacuole
+Parasitophorous vacuole lumen
+Parasitophorous vacuole lumens
+Parasitophorous vacuole membrane
+Parasitophorous vacuole membranes
+Parasitophorous vacuoles
+Perikaryon
+Perikaryons
+Periplasm
+Periplasmic flagellum
+Periplasmic flagellums
+Periplasms
+Peroxisome
+Peroxisome matrix
+Peroxisome matrixs
+Peroxisome membrane
+Peroxisome membranes
+Peroxisomes
+Photoreceptor inner segment
+Photoreceptor inner segments
+Plastid
+Plastid envelope
+Plastid envelopes
+Plastid inner membrane
+Plastid inner membranes
+Plastid intermembrane space
+Plastid intermembrane spaces
+Plastid membrane
+Plastid membranes
+Plastid outer membrane
+Plastid outer membranes
+Plastid stroma
+Plastid stromas
+Plastid thylakoid
+Plastid thylakoid lumen
+Plastid thylakoid lumens
+Plastid thylakoid membrane
+Plastid thylakoid membranes
+Plastid thylakoids
+Plastids
+Preautophagosomal structure
+Preautophagosomal structure membrane
+Preautophagosomal structure membranes
+Preautophagosomal structures
+Prevacuolar compartment
+Prevacuolar compartment lumen
+Prevacuolar compartment lumens
+Prevacuolar compartment membrane
+Prevacuolar compartment membranes
+Prevacuolar compartments
+Prospore
+Prospore membrane
+Prospore membranes
+Prospores
+Protein storage vacuole
+Protein storage vacuole lumen
+Protein storage vacuole lumens
+Protein storage vacuole membrane
+Protein storage vacuole membranes
+Protein storage vacuoles
+Protoplasm
+Protoplasms
+Recycling endosome
+Recycling endosome lumen
+Recycling endosome lumens
+Recycling endosome membrane
+Recycling endosome membranes
+Recycling endosomes
+Rough endoplasmic reticulum
+Rough endoplasmic reticulum lumen
+Rough endoplasmic reticulum lumens
+Rough endoplasmic reticulum membrane
+Rough endoplasmic reticulum membranes
+Rough endoplasmic reticulums
+S-layer
+S-layers
+Sarcoplasmic reticulum
+Sarcoplasmic reticulum lumen
+Sarcoplasmic reticulum lumens
+Sarcoplasmic reticulum membrane
+Sarcoplasmic reticulum membranes
+Sarcoplasmic reticulums
+Secreted
+Secreteds
+Smooth endoplasmic reticulum
+Smooth endoplasmic reticulum lumen
+Smooth endoplasmic reticulum lumens
+Smooth endoplasmic reticulum membrane
+Smooth endoplasmic reticulum membranes
+Smooth endoplasmic reticulums
+Spore core
+Spore core membrane
+Spore core membranes
+Spore cores
+Spore polar tube
+Spore polar tubes
+Spore wall
+Spore walls
+Symbiosome
+Symbiosomes
+Symplast
+Symplasts
+Target cell
+Target cell membrane
+Target cell membranes
+Target cells
+Target membrane
+Target membranes
+Tegument
+Tegument membrane
+Tegument membranes
+Teguments
+Thylakoid
+Thylakoids
+Trichocyst
+Trichocysts
+Vacuole
+Vacuole lumen
+Vacuole lumens
+Vacuole membrane
+Vacuole membranes
+Vacuoles
+Virion
+Virion membrane
+Virion membranes
+Virion tegument
+Virion teguments
+Virions
+Z line
+Z lines
+acrosome
+acrosome inner membrane
+acrosome inner membranes
+acrosome lumen
+acrosome lumens
+acrosome membrane
+acrosome membranes
+acrosome outer membrane
+acrosome outer membranes
+acrosomes
+actin patch
+actin patchs
+adherens junction
+adherens junctions
+aleurone grain
+aleurone grain lumen
+aleurone grain lumens
+aleurone grain membrane
+aleurone grain membranes
+aleurone grains
+amyloplast
+amyloplast inner membrane
+amyloplast inner membranes
+amyloplast membrane
+amyloplast membranes
+amyloplasts
+apical lamina
+apical laminas
+apicoplast
+apicoplasts
+apoplast
+apoplasts
+attachment organelle
+attachment organelle membrane
+attachment organelle membranes
+attachment organelles
+autophagosome
+autophagosome lumen
+autophagosome lumens
+autophagosome membrane
+autophagosome membranes
+autophagosomes
+axon
+axons
+basement membrane
+basement membranes
+bleb
+blebs
+calyx
+calyxs
+capsule
+capsules
+caveola
+caveolas
+cell cortex
+cell cortexs
+cell wall
+cell walls
+centriolar satellite
+centriolar satellites
+centriole
+centrioles
+centromere
+centromeres
+centrosome
+centrosomes
+chloroplast
+chloroplast envelope
+chloroplast envelopes
+chloroplast inner membrane
+chloroplast inner membranes
+chloroplast intermembrane space
+chloroplast intermembrane spaces
+chloroplast membrane
+chloroplast membranes
+chloroplast nucleoid
+chloroplast nucleoids
+chloroplast outer membrane
+chloroplast outer membranes
+chloroplast stroma
+chloroplast stromas
+chloroplast thylakoid
+chloroplast thylakoid lumen
+chloroplast thylakoid lumens
+chloroplast thylakoid membrane
+chloroplast thylakoid membranes
+chloroplast thylakoids
+chloroplasts
+chlorosome envelope
+chlorosome envelopes
+chromaffin granule
+chromaffin granule lumen
+chromaffin granule lumens
+chromaffin granule membrane
+chromaffin granule membranes
+chromaffin granules
+chromoplast
+chromoplast membrane
+chromoplast membranes
+chromoplast stroma
+chromoplast stromas
+chromoplasts
+cilium
+cilium axoneme
+cilium axonemes
+cilium basal bodies
+cilium basal body
+cilium membrane
+cilium membranes
+ciliums
+cis-Golgi network
+cis-Golgi network membrane
+cis-Golgi network membranes
+cis-Golgi networks
+clathrin coated pit
+clathrin coated pits
+clathrin coated vesicle
+clathrin coated vesicle lumen
+clathrin coated vesicle lumens
+clathrin coated vesicle membrane
+clathrin coated vesicle membranes
+clathrin coated vesicles
+coated pit
+coated pits
+cvt vesicle
+cvt vesicle lumen
+cvt vesicle lumens
+cvt vesicle membrane
+cvt vesicle membranes
+cvt vesicles
+cyanelle
+cyanelle envelope
+cyanelle envelopes
+cyanelle inner membrane
+cyanelle inner membranes
+cyanelle intermembrane space
+cyanelle intermembrane spaces
+cyanelle membrane
+cyanelle membranes
+cyanelle outer membrane
+cyanelle outer membranes
+cyanelle stroma
+cyanelle stromas
+cyanelle thylakoid
+cyanelle thylakoid lumen
+cyanelle thylakoid lumens
+cyanelle thylakoid membrane
+cyanelle thylakoid membranes
+cyanelle thylakoids
+cyanelles
+cytoskeleton
+cytoskeletons
+cytosol
+cytosols
+dendrite
+dendrites
+dendritic spine
+dendritic spine membrane
+dendritic spine membranes
+dendritic spines
+desmosome
+desmosomes
+esterosome
+esterosome lumen
+esterosome lumens
+esterosome membrane
+esterosome membranes
+esterosomes
+etioplast
+etioplast membrane
+etioplast membranes
+etioplast stroma
+etioplast stromas
+etioplasts
+exosome
+exosomes
+extracellular matrix
+extracellular matrixs
+extracellular space
+extracellular spaces
+filopodium
+filopodium membrane
+filopodium membranes
+filopodium tip
+filopodium tips
+filopodiums
+flagellum
+flagellum axoneme
+flagellum axonemes
+flagellum basal bodies
+flagellum basal body
+flagellum membrane
+flagellum membranes
+flagellums
+focal adhesion
+focal adhesions
+gap junction
+gap junctions
+gas vesicle
+gas vesicle lumen
+gas vesicle lumens
+gas vesicle membrane
+gas vesicle membranes
+gas vesicles
+gem
+gems
+growth cone
+growth cone membrane
+growth cone membranes
+growth cones
+hemidesmosome
+hemidesmosomes
+host caveola
+host caveolas
+host cis-Golgi network
+host cis-Golgi network membrane
+host cis-Golgi network membranes
+host cis-Golgi networks
+host cytoskeleton
+host cytoskeletons
+host cytosol
+host cytosols
+host filopodium
+host filopodiums
+host multivesicular bodies
+host multivesicular body
+host nucleolus
+host nucleoluses
+host nucleoplasm
+host nucleoplasms
+host perinuclear region
+host perinuclear regions
+host phagosome
+host phagosome membrane
+host phagosome membranes
+host phagosomes
+host plasmodesma
+host plasmodesmas
+host presynaptic cell membrane
+host presynaptic cell membranes
+host synapse
+host synapses
+host trans-Golgi network
+host trans-Golgi network membrane
+host trans-Golgi network membranes
+host trans-Golgi networks
+hyaline layer
+hyaline layers
+interphotoreceptor matrix
+interphotoreceptor matrixs
+invadopodium
+invadopodium membrane
+invadopodium membranes
+invadopodiums
+kinetochore
+kinetochores
+kinetoplast
+kinetoplasts
+kinocilium
+kinociliums
+lamellipodium
+lamellipodium membrane
+lamellipodium membranes
+lamellipodiums
+microneme
+microneme lumen
+microneme lumens
+microneme membrane
+microneme membranes
+micronemes
+microtubule organizing center
+microtubule organizing centers
+microvillus
+microvillus membrane
+microvillus membranes
+microvilluses
+mitochondrion nucleoid
+mitochondrion nucleoids
+multivesicular bodies
+multivesicular body
+multivesicular body lumen
+multivesicular body lumens
+multivesicular body membrane
+multivesicular body membranes
+myofibril
+myofibrils
+nuclear pore complex
+nuclear pore complexs
+nucleoid
+nucleoids
+nucleolus
+nucleoluses
+nucleoplasm
+nucleoplasms
+organellar chromatophore
+organellar chromatophore inner membrane
+organellar chromatophore inner membranes
+organellar chromatophore intermembrane space
+organellar chromatophore intermembrane spaces
+organellar chromatophore membrane
+organellar chromatophore membranes
+organellar chromatophore outer membrane
+organellar chromatophore outer membranes
+organellar chromatophore stroma
+organellar chromatophore stromas
+organellar chromatophore thylakoid
+organellar chromatophore thylakoid lumen
+organellar chromatophore thylakoid lumens
+organellar chromatophore thylakoid membrane
+organellar chromatophore thylakoid membranes
+organellar chromatophore thylakoids
+organellar chromatophores
+paranodal septate junction
+paranodal septate junctions
+peribacteroid membrane
+peribacteroid membranes
+peribacteroid space
+peribacteroid spaces
+perinuclear region
+perinuclear regions
+perinuclear theca
+perinuclear thecas
+perispore
+perispores
+phagocytic cup
+phagocytic cups
+phagosome
+phagosome lumen
+phagosome lumens
+phagosome membrane
+phagosome membranes
+phagosomes
+photoreceptor outer segment
+photoreceptor outer segments
+phragmoplast
+phragmoplasts
+plasmodesma
+plasmodesmas
+plastid nucleoid
+plastid nucleoids
+plastoglobule
+plastoglobules
+podosome
+podosome membrane
+podosome membranes
+podosomes
+pollen coat
+pollen coats
+porosome
+porosomes
+postsynaptic cell membrane
+postsynaptic cell membranes
+postsynaptic densities
+postsynaptic density
+presynaptic cell membrane
+presynaptic cell membranes
+primary cell wall
+primary cell walls
+prolamellar bodies
+prolamellar body
+pseudopodium
+pseudopodium membrane
+pseudopodium membranes
+pseudopodium tip
+pseudopodium tips
+pseudopodiums
+rhoptries
+rhoptry
+rhoptry lumen
+rhoptry lumens
+rhoptry membrane
+rhoptry membranes
+ruffle
+ruffle membrane
+ruffle membranes
+ruffles
+sarcolemma
+sarcolemmas
+sarcomere
+sarcomeres
+sarcoplasm
+sarcoplasms
+secondary cell wall
+secondary cell walls
+secretory vesicle
+secretory vesicle lumen
+secretory vesicle lumens
+secretory vesicle membrane
+secretory vesicle membranes
+secretory vesicles
+septate junction
+septate junctions
+slime layer
+slime layers
+spindle
+spindle pole
+spindle pole bodies
+spindle pole body
+spindle poles
+spindles
+spore coat
+spore coats
+spore cortex
+spore cortexs
+spore outer membrane
+spore outer membranes
+stereocilium
+stereocilium membrane
+stereocilium membranes
+stereociliums
+surface film
+surface films
+synapse
+synapses
+synaptic vesicle
+synaptic vesicle lumen
+synaptic vesicle lumens
+synaptic vesicle membrane
+synaptic vesicle membranes
+synaptic vesicles
+synaptosome
+synaptosomes
+target cell cytoplasm
+target cell cytoplasms
+telomere
+telomeres
+tight junction
+tight junctions
+trans-Golgi network
+trans-Golgi network membrane
+trans-Golgi network membranes
+trans-Golgi networks
+uropodium
+uropodiums
+2-micrometer circle DNA
+2-micrometer circle DNAs
+A band
+A bands
+Barr bodies
+Barr body
+Bunina bodies
+Bunina body
+C bouton
+C boutons
+C zone
+C zones
+C-fiber
+C-fibers
+CA3 pyramidal cell dendrite
+CA3 pyramidal cell dendrites
+COPI coated vesicle
+COPI coated vesicle membrane
+COPI coated vesicle membranes
+COPI coated vesicles
+CVT vesicle
+CVT vesicles
+Cajal bodies
+Cajal body
+Casparian strip
+Casparian strips
+Cvt vesicle membrane
+Cvt vesicle membranes
+DNA replication termination region
+DNA replication termination regions
+DNA viral genome
+DNA viral genomes
+ER bodies
+ER body
+ER to Golgi transport vesicle
+ER to Golgi transport vesicle membrane
+ER to Golgi transport vesicle membranes
+ER to Golgi transport vesicles
+ER-mitochondrion membrane contact site
+ER-mitochondrion membrane contact sites
+F bouton
+F boutons
+Flemming bodies
+Flemming body
+Gemini of coiled bodies
+Gemini of coiled bodieses
+Golgi apparatus
+Golgi apparatus part
+Golgi apparatus parts
+Golgi apparatuses
+Golgi associated vesicle
+Golgi associated vesicle lumen
+Golgi associated vesicle lumens
+Golgi associated vesicle membrane
+Golgi associated vesicle membranes
+Golgi associated vesicles
+Golgi cis cisterna
+Golgi cis cisterna membrane
+Golgi cis cisterna membranes
+Golgi cis cisternas
+Golgi cisterna
+Golgi cisterna membrane
+Golgi cisterna membranes
+Golgi cisternas
+Golgi lumen
+Golgi lumens
+Golgi medial cisterna
+Golgi medial cisterna membrane
+Golgi medial cisterna membranes
+Golgi medial cisternas
+Golgi membrane
+Golgi membranes
+Golgi stack
+Golgi stack lumen
+Golgi stack lumens
+Golgi stacks
+Golgi subcompartment
+Golgi subcompartments
+Golgi to ER transport vesicle
+Golgi to ER transport vesicle membrane
+Golgi to ER transport vesicle membranes
+Golgi to ER transport vesicles
+Golgi to plasma membrane transport vesicle
+Golgi to plasma membrane transport vesicles
+Golgi trans cisterna
+Golgi trans cisterna membrane
+Golgi trans cisterna membranes
+Golgi trans cisternas
+Gram-negative-bacterium-type cell wall
+Gram-negative-bacterium-type cell walls
+Gram-positive-bacterium-type cell wall
+Gram-positive-bacterium-type cell walls
+H zone
+H zones
+Herring bodies
+Herring body
+I band
+I bands
+LYSP100 associated nuclear domain
+LYSP100 associated nuclear domains
+Lewy bodies
+Lewy body
+Lewy body core
+Lewy body cores
+Lewy body corona
+Lewy body coronas
+Lewy body like hyaline inclusion
+Lewy body like hyaline inclusions
+Lewy neurite
+Lewy neurites
+M band
+M bands
+Maurer 's cleft
+Maurer 's clefts
+Nebenkern
+Nebenkerns
+P1 peroxisome
+P1 peroxisomes
+P2 peroxisome
+P2 peroxisomes
+P3 peroxisome
+P3 peroxisomes
+P4 peroxisome
+P4 peroxisomes
+P5 peroxisome
+P5 peroxisomes
+P6 peroxisome
+P6 peroxisomes
+PHA granule
+PHA granules
+PML bodies
+PML body
+Pick bodies
+Pick body
+RNA viral genome
+RNA viral genomes
+S bouton
+S boutons
+S-layer
+S-layers
+Schaffer axon collateral
+Schaffer axon collaterals
+Schmidt-Lanterman incisure
+Schmidt-Lanterman incisures
+Schwann cell microvillus
+Schwann cell microvilluses
+T = 1 icosahedral viral capsid
+T = 1 icosahedral viral capsids
+T = 13 icosahedral viral capsid
+T = 13 icosahedral viral capsids
+T = 147 icosahedral capsid
+T = 147 icosahedral capsids
+T = 16 icosahedral viral capsid
+T = 16 icosahedral viral capsids
+T = 169 icosahedral viral capsid
+T = 169 icosahedral viral capsids
+T = 2 icosahedral viral capsid
+T = 2 icosahedral viral capsids
+T = 219 icosahedral capsid
+T = 219 icosahedral capsids
+T = 25 icosahedral viral capsid
+T = 25 icosahedral viral capsids
+T = 4 icosahedral viral capsid
+T = 4 icosahedral viral capsids
+T = 7 icosahedral viral capsid
+T = 7 icosahedral viral capsids
+T = pseudo3 icosahedral viral capsid
+T = pseudo3 icosahedral viral capsids
+T =3 icosahedral viral capsid
+T =3 icosahedral viral capsids
+T-tubule
+T-tubules
+TOR complex
+TOR complexs
+Ubisch bodies
+Ubisch body
+W chromosome
+W chromosomes
+Weibel-Palade bodies
+Weibel-Palade body
+X chromosome
+X chromosomes
+XY bodies
+XY body
+Y chromosome
+Y chromosomes
+Yb bodies
+Yb body
+Z chromosome
+Z chromosomes
+Z disc
+Z discs
+acidocalcisome
+acidocalcisome lumen
+acidocalcisome lumens
+acidocalcisome membrane
+acidocalcisome membranes
+acidocalcisomes
+acroblast
+acroblasts
+acrosomal lumen
+acrosomal lumens
+acrosomal matrix
+acrosomal matrixs
+acrosomal membrane
+acrosomal membranes
+acrosomal vesicle
+acrosomal vesicles
+actin cap
+actin caps
+actin cortical patch
+actin cortical patchs
+actin cytoskeleton
+actin cytoskeletons
+actin filament bundle
+actin filament bundles
+actin rod
+actin rods
+actin tubule
+actin tubules
+active sex chromosome
+active sex chromosomes
+actomyosin
+actomyosin contractile ring
+actomyosin contractile rings
+actomyosins
+adherens junction
+adherens junctions
+adventitious septum
+adventitious septums
+aggresome
+aggresomes
+alae of collagen and cuticulin based cuticle extracellular matrix
+alae of collagen and cuticulin based cuticle extracellular matrixs
+aleurone grain
+aleurone grain lumen
+aleurone grain lumens
+aleurone grain membrane
+aleurone grain membranes
+aleurone grains
+alveolar lamellar bodies
+alveolar lamellar body
+alveolar lamellar body membrane
+alveolar lamellar body membranes
+ambisense viral genome
+ambisense viral genomes
+amorphous vesicle
+amorphous vesicles
+amphisome
+amphisomes
+amyloplast
+amyloplast envelope
+amyloplast envelopes
+amyloplast inner membrane
+amyloplast inner membranes
+amyloplast membrane
+amyloplast membranes
+amyloplast starch grain
+amyloplast starch grains
+amyloplasts
+anammoxosome
+anammoxosomes
+anchored component of cell outer membrane
+anchored component of cell outer membranes
+anchored component of external side of plasma membrane
+anchored component of external side of plasma membranes
+anchored component of membrane
+anchored component of membranes
+anchored component of periplasmic side of cell outer membrane
+anchored component of periplasmic side of cell outer membranes
+anchored component of plasma membrane
+anchored component of plasma membranes
+anchored component of the cytoplasmic side of the plasma membrane
+anchored component of the cytoplasmic side of the plasma membranes
+anchoring junction
+anchoring junctions
+annular furrow extracellular matrix
+annular furrow extracellular matrixs
+annulate lamellae
+annulate lamellaes
+annuli extracellular matrix
+annuli extracellular matrixs
+antipodal cell nucleus
+antipodal cell nucleuses
+apical complex
+apical complexs
+apical cortex
+apical cortexs
+apical dendrite
+apical dendrites
+apical hemi-adherens junction
+apical hemi-adherens junctions
+apical junction complex
+apical junction complexs
+apical lamina of hyaline layer
+apical lamina of hyaline layers
+apical part of cell
+apical part of cells
+apical plasma membrane
+apical plasma membranes
+apical pole of neuron
+apical pole of neurons
+apicolateral plasma membrane
+apicolateral plasma membranes
+apicoplast
+apicoplasts
+apoplast
+apoplasts
+apoptotic bodies
+apoptotic body
+arbuscule
+arbuscules
+archaeal-type flagellum
+archaeal-type flagellums
+ascospore wall
+ascospore walls
+ascospore-type prospore
+ascospore-type prospores
+ascus epiplasm
+ascus epiplasms
+ascus lipid particle
+ascus lipid particles
+ascus membrane
+ascus membranes
+asexual spore wall
+asexual spore walls
+assemblon
+assemblons
+astrocyte end-foot
+astrocyte end-foots
+astrocyte projection
+astrocyte projections
+asymmetric synapse
+asymmetric synapses
+attachment organelle
+attachment organelle membrane
+attachment organelle membranes
+attachment organelles
+autolysosome
+autolysosomes
+autophagic vacuole
+autophagic vacuole lumen
+autophagic vacuole lumens
+autophagic vacuole membrane
+autophagic vacuole membranes
+autophagic vacuoles
+autosome
+autosomes
+axolemma
+axolemmas
+axon
+axon collateral
+axon collaterals
+axon cytoplasm
+axon cytoplasms
+axon hillock
+axon hillocks
+axon initial segment
+axon initial segments
+axon microtubule bundle
+axon microtubule bundles
+axon part
+axon parts
+axon terminus
+axon terminuses
+axonal growth cone
+axonal growth cones
+axonal spine
+axonal spines
+axonemal basal plate
+axonemal basal plates
+axonemal central apparatus
+axonemal central apparatuses
+axonemal central bridge
+axonemal central bridges
+axonemal central pair
+axonemal central pair projection
+axonemal central pair projections
+axonemal central pairs
+axonemal outer doublet
+axonemal outer doublets
+axoneme
+axoneme part
+axoneme parts
+axonemes
+axons
+azurophil granule
+azurophil granule lumen
+azurophil granule lumens
+azurophil granule membrane
+azurophil granule membranes
+azurophil granules
+bacterial nucleoid
+bacterial nucleoids
+bacterial thylakoid
+bacterial thylakoids
+bacterial-type flagellar cytoplasm
+bacterial-type flagellar cytoplasms
+bacterial-type flagellum
+bacterial-type flagellum basal bodies
+bacterial-type flagellum basal body
+bacterial-type flagellum basal body , C ring
+bacterial-type flagellum basal body , C rings
+bacterial-type flagellum basal body , MS ring
+bacterial-type flagellum basal body , MS rings
+bacterial-type flagellum basal body , distal rod
+bacterial-type flagellum basal body , distal rod , L ring
+bacterial-type flagellum basal body , distal rod , L rings
+bacterial-type flagellum basal body , distal rod , P ring
+bacterial-type flagellum basal body , distal rod , P rings
+bacterial-type flagellum basal body , distal rods
+bacterial-type flagellum basal body , proximal rod
+bacterial-type flagellum basal body , proximal rods
+bacterial-type flagellum basal body , rod
+bacterial-type flagellum basal body , rods
+bacterial-type flagellum filament
+bacterial-type flagellum filament cap
+bacterial-type flagellum filament caps
+bacterial-type flagellum filaments
+bacterial-type flagellum hook
+bacterial-type flagellum hook-filament junction
+bacterial-type flagellum hook-filament junctions
+bacterial-type flagellum hooks
+bacterial-type flagellum part
+bacterial-type flagellum parts
+bacterial-type flagellums
+bacteroid containing symbiosome
+bacteroid containing symbiosomes
+barrier septum
+barrier septums
+basal cortex
+basal cortexs
+basal labyrinth
+basal labyrinths
+basal lamina
+basal laminas
+basal layer of collagen and cuticulin based cuticle extracellular matrix
+basal layer of collagen and cuticulin based cuticle extracellular matrixs
+basal part of cell
+basal part of cells
+basal plasma membrane
+basal plasma membranes
+basal pole of neuron
+basal pole of neurons
+basal ring of apical complex
+basal ring of apical complexs
+basement membrane
+basement membranes
+basilar dendrite
+basilar dendrites
+basolateral plasma membrane
+basolateral plasma membranes
+bicellular tight junction
+bicellular tight junctions
+biofilm matrix
+biofilm matrix component
+biofilm matrix components
+biofilm matrix surface
+biofilm matrix surfaces
+biofilm matrixs
+bipartite viral genome
+bipartite viral genomes
+bleb
+blebs
+blood microparticle
+blood microparticles
+bounding membrane of organelle
+bounding membrane of organelles
+bridge contact site
+bridge contact sites
+brush border
+brush border membrane
+brush border membranes
+brush borders
+calyx of Held
+calyx of Helds
+capitate projection
+capitate projections
+capsomere
+capsomeres
+capsule
+capsules
+carboxysome
+carboxysomes
+cardiac myofibril
+cardiac myofibrils
+carotenoid vesicle
+carotenoid vesicles
+caveola
+caveolas
+cell bodies
+cell body
+cell body fiber
+cell body fibers
+cell body membrane
+cell body membranes
+cell cortex
+cell cortex of cell tip
+cell cortex of cell tips
+cell cortex of growing cell tip
+cell cortex of growing cell tips
+cell cortex part
+cell cortex parts
+cell cortexs
+cell division site
+cell division site part
+cell division site parts
+cell division sites
+cell envelope
+cell envelopes
+cell hair
+cell hairs
+cell junction
+cell junctions
+cell leading edge
+cell leading edges
+cell outer membrane
+cell outer membranes
+cell part
+cell parts
+cell peripheries
+cell periphery
+cell plate
+cell plates
+cell pole
+cell poles
+cell projection
+cell projection cytoplasm
+cell projection cytoplasms
+cell projection membrane
+cell projection membranes
+cell projection part
+cell projection parts
+cell projections
+cell septum
+cell septum edging
+cell septum edgings
+cell septum part
+cell septum parts
+cell septum surface
+cell septum surfaces
+cell septums
+cell surface
+cell surface furrow
+cell surface furrows
+cell surfaces
+cell tip
+cell tips
+cell trailing edge
+cell trailing edge membrane
+cell trailing edge membranes
+cell trailing edges
+cell wall
+cell wall bounded periplasmic space
+cell wall bounded periplasmic spaces
+cell wall part
+cell wall parts
+cell walls
+cell-cell adherens junction
+cell-cell adherens junctions
+cell-cell contact zone
+cell-cell contact zones
+cell-cell junction
+cell-cell junctions
+cell-substrate adherens junction
+cell-substrate adherens junctions
+cell-substrate junction
+cell-substrate junctions
+cellular birth scar
+cellular birth scars
+cellular bud
+cellular bud membrane
+cellular bud membranes
+cellular bud neck
+cellular bud neck contractile ring
+cellular bud neck contractile rings
+cellular bud neck septin collar
+cellular bud neck septin collars
+cellular bud neck septin ring
+cellular bud neck septin rings
+cellular bud neck septin structure
+cellular bud neck septin structures
+cellular bud neck split septin rings
+cellular bud neck split septin ringses
+cellular bud necks
+cellular bud scar
+cellular bud scars
+cellular bud tip
+cellular bud tips
+cellular buds
+cellulose microfibril
+cellulose microfibrils
+cellulosome
+cellulosomes
+central element
+central elements
+central plaque of mitotic spindle pole bodies
+central plaque of mitotic spindle pole body
+central plaque of spindle pole bodies
+central plaque of spindle pole body
+central vacuole
+central vacuoles
+centriolar satellite
+centriolar satellites
+centriole
+centrioles
+centrosomal corona
+centrosomal coronas
+centrosome
+centrosomes
+cerebellar mossy fiber
+cerebellar mossy fibers
+chiasma
+chiasmas
+chitosan layer of spore wall
+chitosan layer of spore walls
+chitosome
+chitosome membrane
+chitosome membranes
+chitosomes
+chlamydospore septin filament arraies
+chlamydospore septin filament array
+chloroplast
+chloroplast chromosome
+chloroplast chromosomes
+chloroplast envelope
+chloroplast envelopes
+chloroplast inner membrane
+chloroplast inner membranes
+chloroplast intermembrane space
+chloroplast intermembrane spaces
+chloroplast membrane
+chloroplast membranes
+chloroplast nucleoid
+chloroplast nucleoids
+chloroplast outer membrane
+chloroplast outer membranes
+chloroplast part
+chloroplast parts
+chloroplast starch grain
+chloroplast starch grains
+chloroplast stroma
+chloroplast stromal thylakoid
+chloroplast stromal thylakoids
+chloroplast stromas
+chloroplast thylakoid
+chloroplast thylakoid lumen
+chloroplast thylakoid lumens
+chloroplast thylakoid membrane
+chloroplast thylakoid membranes
+chloroplast thylakoids
+chloroplasts
+chlorosome
+chlorosome envelope
+chlorosome envelopes
+chlorosomes
+chorion
+chorions
+chromaffin granule
+chromaffin granule lumen
+chromaffin granule lumens
+chromaffin granule membrane
+chromaffin granule membranes
+chromaffin granules
+chromocenter
+chromocenters
+chromoplast
+chromoplast envelope
+chromoplast envelopes
+chromoplast inner membrane
+chromoplast inner membranes
+chromoplast intermembrane space
+chromoplast intermembrane spaces
+chromoplast membrane
+chromoplast membranes
+chromoplast outer membrane
+chromoplast outer membranes
+chromoplast stroma
+chromoplast stromas
+chromoplasts
+chromosomal part
+chromosomal parts
+chromosomal region
+chromosomal regions
+chromosome
+chromosome , centromeric core domain
+chromosome , centromeric core domains
+chromosome , centromeric outer repeat region
+chromosome , centromeric outer repeat regions
+chromosome , centromeric region
+chromosome , centromeric regions
+chromosome , telomeric region
+chromosome , telomeric regions
+chromosomes
+ciliary basal bodies
+ciliary basal body
+ciliary base
+ciliary bases
+ciliary cytoplasm
+ciliary cytoplasms
+ciliary inversin compartment
+ciliary inversin compartments
+ciliary membrane
+ciliary membranes
+ciliary part
+ciliary parts
+ciliary pocket
+ciliary pocket membrane
+ciliary pocket membranes
+ciliary pockets
+ciliary rootlet
+ciliary rootlets
+ciliary shaft
+ciliary shafts
+ciliary tip
+ciliary tips
+ciliary transition zone
+ciliary transition zones
+cilium
+ciliums
+cis-Golgi network
+cis-Golgi network membrane
+cis-Golgi network membranes
+cis-Golgi networks
+classical Lewy bodies
+classical Lewy body
+clathrin coated endocytic vesicle
+clathrin coated endocytic vesicle membrane
+clathrin coated endocytic vesicle membranes
+clathrin coated endocytic vesicles
+clathrin coated phagocytic vesicle
+clathrin coated phagocytic vesicle membrane
+clathrin coated phagocytic vesicle membranes
+clathrin coated phagocytic vesicles
+clathrin coated vesicle
+clathrin coated vesicle membrane
+clathrin coated vesicle membranes
+clathrin coated vesicles
+clathrin sculpted acetylcholine transport vesicle
+clathrin sculpted acetylcholine transport vesicle lumen
+clathrin sculpted acetylcholine transport vesicle lumens
+clathrin sculpted acetylcholine transport vesicle membrane
+clathrin sculpted acetylcholine transport vesicle membranes
+clathrin sculpted acetylcholine transport vesicles
+clathrin sculpted gamma-aminobutyric acid transport vesicle
+clathrin sculpted gamma-aminobutyric acid transport vesicle lumen
+clathrin sculpted gamma-aminobutyric acid transport vesicle lumens
+clathrin sculpted gamma-aminobutyric acid transport vesicle membrane
+clathrin sculpted gamma-aminobutyric acid transport vesicle membranes
+clathrin sculpted gamma-aminobutyric acid transport vesicles
+clathrin sculpted glutamate transport vesicle
+clathrin sculpted glutamate transport vesicle lumen
+clathrin sculpted glutamate transport vesicle lumens
+clathrin sculpted glutamate transport vesicle membrane
+clathrin sculpted glutamate transport vesicle membranes
+clathrin sculpted glutamate transport vesicles
+clathrin sculpted monoamine transport vesicle
+clathrin sculpted monoamine transport vesicle lumen
+clathrin sculpted monoamine transport vesicle lumens
+clathrin sculpted monoamine transport vesicle membrane
+clathrin sculpted monoamine transport vesicle membranes
+clathrin sculpted monoamine transport vesicles
+clathrin sculpted vesicle
+clathrin sculpted vesicles
+cleavage apparatus septin structure
+cleavage apparatus septin structures
+cleavage bodies
+cleavage body
+cleavage furrow
+cleavage furrows
+climbing fiber
+climbing fibers
+coated membrane
+coated membranes
+coated pit
+coated pits
+coated vesicle
+coated vesicle membrane
+coated vesicle membranes
+coated vesicles
+collagen and cuticulin based cuticle extracellular matrix
+collagen and cuticulin based cuticle extracellular matrix part
+collagen and cuticulin based cuticle extracellular matrix parts
+collagen and cuticulin based cuticle extracellular matrixs
+columella
+columellas
+compact myelin
+compact myelins
+complex laminated bodies
+complex laminated body
+compound sieve plate
+compound sieve plates
+condensed chromosome
+condensed chromosome , centromeric region
+condensed chromosome , centromeric regions
+condensed chromosomes
+condensed nuclear chromosome
+condensed nuclear chromosome , centromeric region
+condensed nuclear chromosome , centromeric regions
+condensed nuclear chromosomes
+cone cell pedicle
+cone cell pedicles
+connecting hemi-adherens junction
+connecting hemi-adherens junctions
+conoid
+conoids
+contact site
+contact sites
+contractile actin filament bundle
+contractile actin filament bundles
+contractile fiber
+contractile fiber part
+contractile fiber parts
+contractile fibers
+contractile ring
+contractile rings
+contractile vacuolar membrane
+contractile vacuolar membranes
+contractile vacuole
+contractile vacuoles
+cornified envelope
+cornified envelopes
+cortical Lewy bodies
+cortical Lewy body
+cortical actin cytoskeleton
+cortical actin cytoskeletons
+cortical cytoskeleton
+cortical cytoskeletons
+cortical endoplasmic reticulum
+cortical endoplasmic reticulums
+cortical granule
+cortical granules
+cortical layer of collagen and cuticulin based cuticle extracellular matrix
+cortical layer of collagen and cuticulin based cuticle extracellular matrixs
+cortical microtubule cytoskeleton
+cortical microtubule cytoskeletons
+costamere
+costameres
+crystalloid
+crystalloids
+cuticular plate
+cuticular plates
+cyanelle
+cyanelle envelope
+cyanelle envelopes
+cyanelle inner membrane
+cyanelle inner membranes
+cyanelle intermembrane space
+cyanelle intermembrane spaces
+cyanelle membrane
+cyanelle membranes
+cyanelle outer membrane
+cyanelle outer membranes
+cyanelle stroma
+cyanelle stromas
+cyanelle thylakoid
+cyanelle thylakoid lumen
+cyanelle thylakoid lumens
+cyanelle thylakoid membrane
+cyanelle thylakoid membranes
+cyanelle thylakoids
+cyanelles
+cyanosome
+cyanosomes
+cyst wall
+cyst walls
+cytolytic granule
+cytolytic granules
+cytoneme
+cytonemes
+cytoophidium
+cytoophidiums
+cytoplasm
+cytoplasmic chromosome
+cytoplasmic chromosomes
+cytoplasmic membrane bounded vesicle
+cytoplasmic membrane bounded vesicle lumen
+cytoplasmic membrane bounded vesicle lumens
+cytoplasmic membrane bounded vesicles
+cytoplasmic part
+cytoplasmic parts
+cytoplasmic periphery of the nuclear pore complex
+cytoplasmic periphery of the nuclear pore complexs
+cytoplasmic replication fork
+cytoplasmic replication forks
+cytoplasmic side of Golgi membrane
+cytoplasmic side of Golgi membranes
+cytoplasmic side of apical plasma membrane
+cytoplasmic side of apical plasma membranes
+cytoplasmic side of early endosome membrane
+cytoplasmic side of early endosome membranes
+cytoplasmic side of endoplasmic reticulum membrane
+cytoplasmic side of endoplasmic reticulum membranes
+cytoplasmic side of endosome membrane
+cytoplasmic side of endosome membranes
+cytoplasmic side of late endosome membrane
+cytoplasmic side of late endosome membranes
+cytoplasmic side of lysosomal membrane
+cytoplasmic side of lysosomal membranes
+cytoplasmic side of membrane
+cytoplasmic side of membranes
+cytoplasmic side of mitochondrial outer membrane
+cytoplasmic side of mitochondrial outer membranes
+cytoplasmic side of plasma membrane
+cytoplasmic side of plasma membranes
+cytoplasmic side of rough endoplasmic reticulum membrane
+cytoplasmic side of rough endoplasmic reticulum membranes
+cytoplasmic side of smooth endoplasmic reticulum membrane
+cytoplasmic side of smooth endoplasmic reticulum membranes
+cytoplasmic side of trans-Golgi network transport vesicle membrane
+cytoplasmic side of trans-Golgi network transport vesicle membranes
+cytoplasmic side of transport vesicle membrane
+cytoplasmic side of transport vesicle membranes
+cytoplasmic vesicle
+cytoplasmic vesicle membrane
+cytoplasmic vesicle membranes
+cytoplasmic vesicle part
+cytoplasmic vesicle parts
+cytoplasmic vesicles
+cytoplasmic viral factories
+cytoplasmic viral factory
+cytoplasms
+cytoproct
+cytoprocts
+cytoskeletal calyx
+cytoskeletal calyxs
+cytoskeletal part
+cytoskeletal parts
+cytoskeleton
+cytoskeletons
+cytosol
+cytosolic part
+cytosolic parts
+cytosols
+cytostome
+cytostomes
+deep fiber
+deep fibers
+dendriole
+dendrioles
+dendrite
+dendrite cytoplasm
+dendrite cytoplasms
+dendrite membrane
+dendrite membranes
+dendrite terminus
+dendrite terminuses
+dendrites
+dendritic branch
+dendritic branch point
+dendritic branch points
+dendritic branchs
+dendritic cell dendrite
+dendritic cell dendrites
+dendritic filopodium
+dendritic filopodiums
+dendritic growth cone
+dendritic growth cones
+dendritic knob
+dendritic knobs
+dendritic lamellar bodies
+dendritic lamellar body
+dendritic shaft
+dendritic shafts
+dendritic spine
+dendritic spine head
+dendritic spine heads
+dendritic spine membrane
+dendritic spine membranes
+dendritic spine neck
+dendritic spine necks
+dendritic spines
+dendritic tree
+dendritic trees
+dendritic tuft
+dendritic tufts
+dense bodies
+dense body
+dense core granule
+dense core granule membrane
+dense core granule membranes
+dense core granules
+dense fibrillar component
+dense fibrillar components
+dense nuclear bodies
+dense nuclear body
+dentate gyrus mossy fiber
+dentate gyrus mossy fibers
+desmosome
+desmosomes
+deuterosome
+deuterosomes
+dinoflagellate antapex
+dinoflagellate antapexs
+dinoflagellate antapical horn
+dinoflagellate antapical horns
+dinoflagellate apex
+dinoflagellate apexs
+dinoflagellate apical groove
+dinoflagellate apical grooves
+dinoflagellate apical horn
+dinoflagellate apical horns
+dinoflagellate cingulum
+dinoflagellate cingulums
+dinoflagellate epicone
+dinoflagellate epicones
+dinoflagellate hypocone
+dinoflagellate hypocones
+dinoflagellate sulcal notch
+dinoflagellate sulcal notchs
+dinoflagellate sulcus
+dinoflagellate sulcuses
+dityrosine layer of spore wall
+dityrosine layer of spore walls
+dolipore septum
+dolipore septums
+double membrane vesicle viral factories
+double membrane vesicle viral factory
+dsRNA viral genome
+dsRNA viral genomes
+early endosome
+early endosome lumen
+early endosome lumens
+early endosome membrane
+early endosome membranes
+early endosomes
+early phagosome
+early phagosome membrane
+early phagosome membranes
+early phagosomes
+early recombination nodule
+early recombination nodules
+ectexine
+ectexines
+ectoplasm
+ectoplasms
+egg coat
+egg coats
+eisosome
+eisosome membrane domain and MCC
+eisosome membrane domain and MCCs
+eisosomes
+elaioplast
+elaioplast stroma
+elaioplast stromas
+elaioplasts
+elastic fiber
+elastic fibers
+endexine
+endexines
+endocytic patch
+endocytic patchs
+endocytic vesicle
+endocytic vesicle lumen
+endocytic vesicle lumens
+endocytic vesicle membrane
+endocytic vesicle membranes
+endocytic vesicles
+endolysosome
+endolysosome lumen
+endolysosome lumens
+endolysosome membrane
+endolysosome membranes
+endolysosomes
+endomembrane system
+endomembrane systems
+endonuclear canal
+endonuclear canals
+endoplasmic reticulum
+endoplasmic reticulum cisternal network
+endoplasmic reticulum cisternal networks
+endoplasmic reticulum exit site
+endoplasmic reticulum exit sites
+endoplasmic reticulum lumen
+endoplasmic reticulum lumens
+endoplasmic reticulum membrane
+endoplasmic reticulum membranes
+endoplasmic reticulum part
+endoplasmic reticulum parts
+endoplasmic reticulum quality control compartment
+endoplasmic reticulum quality control compartments
+endoplasmic reticulum tubular network
+endoplasmic reticulum tubular networks
+endoplasmic reticulum-Golgi intermediate compartment
+endoplasmic reticulum-Golgi intermediate compartment membrane
+endoplasmic reticulum-Golgi intermediate compartment membranes
+endoplasmic reticulum-Golgi intermediate compartments
+endoplasmic reticulums
+endosomal part
+endosomal parts
+endosome
+endosome lumen
+endosome lumens
+endosome membrane
+endosome membranes
+endosome to plasma membrane transport vesicle
+endosome to plasma membrane transport vesicles
+endosomes
+endospore coat
+endospore coats
+endospore core
+endospore cores
+endospore cortex
+endospore cortexs
+endospore external encapsulating structure
+endospore external encapsulating structures
+endospore forming forespore
+endospore forming forespores
+endothelial microparticle
+endothelial microparticles
+ensheathing process
+ensheathing processes
+envelope
+envelopes
+epicuticle of collagen and cuticulin based cuticle extracellular matrix
+epicuticle of collagen and cuticulin based cuticle extracellular matrixs
+epidermal lamellar bodies
+epidermal lamellar body
+epidermal lamellar body membrane
+epidermal lamellar body membranes
+equatorial microtubule organizing center
+equatorial microtubule organizing centers
+esterosome
+esterosome lumen
+esterosome lumens
+esterosome membrane
+esterosome membranes
+esterosomes
+ethanolamine degradation polyhedral organelle
+ethanolamine degradation polyhedral organelles
+etioplast
+etioplast envelope
+etioplast envelopes
+etioplast membrane
+etioplast membranes
+etioplast prolamellar bodies
+etioplast prolamellar body
+etioplast stroma
+etioplast stromas
+etioplasts
+excitatory neuromuscular junction
+excitatory neuromuscular junction of somatic myotube
+excitatory neuromuscular junction of somatic myotubes
+excitatory neuromuscular junctions
+excitatory synapse
+excitatory synapses
+exine
+exines
+exocytic vesicle
+exocytic vesicles
+exoneme
+exonemes
+exosporium
+exosporiums
+external encapsulating structure
+external encapsulating structure part
+external encapsulating structure parts
+external encapsulating structures
+external side of apical plasma membrane
+external side of apical plasma membranes
+external side of cell outer membrane
+external side of cell outer membranes
+external side of cell wall
+external side of cell walls
+external side of fungal-type cell wall
+external side of fungal-type cell walls
+external side of mycolate outer membrane
+external side of mycolate outer membranes
+external side of plasma membrane
+external side of plasma membranes
+extra-invasive hyphal membrane
+extra-invasive hyphal membranes
+extra-invasive hyphal space
+extra-invasive hyphal spaces
+extracellular core region of desmosome
+extracellular core region of desmosomes
+extracellular exosome
+extracellular exosomes
+extracellular matrix
+extracellular matrix component
+extracellular matrix components
+extracellular matrixs
+extracellular membrane bounded organelle
+extracellular membrane bounded organelles
+extracellular non-membrane-bounded organelle
+extracellular non-membrane-bounded organelles
+extracellular organelle
+extracellular organelles
+extracellular region
+extracellular region part
+extracellular region parts
+extracellular regions
+extracellular space
+extracellular space of host
+extracellular space of hosts
+extracellular spaces
+extracellular vesicle
+extracellular vesicles
+extrachromosomal DNA
+extrachromosomal DNAs
+extrachromosomal circular DNA
+extrachromosomal circular DNAs
+extrachromosomal rDNA circle
+extrachromosomal rDNA circles
+extrahaustorial matrix
+extrahaustorial matrixs
+extrahaustorial membrane
+extrahaustorial membranes
+extraorganismal space
+extraorganismal spaces
+extrinsic component of Golgi membrane
+extrinsic component of Golgi membranes
+extrinsic component of autophagic vacuole membrane
+extrinsic component of autophagic vacuole membranes
+extrinsic component of cell outer membrane
+extrinsic component of cell outer membranes
+extrinsic component of cytoplasmic side of plasma membrane
+extrinsic component of cytoplasmic side of plasma membranes
+extrinsic component of endoplasmic reticulum membrane
+extrinsic component of endoplasmic reticulum membranes
+extrinsic component of endosome membrane
+extrinsic component of endosome membranes
+extrinsic component of external side of cell outer membrane
+extrinsic component of external side of cell outer membranes
+extrinsic component of external side of mycolate outer membrane
+extrinsic component of external side of mycolate outer membranes
+extrinsic component of external side of plasma membrane
+extrinsic component of external side of plasma membranes
+extrinsic component of fungal-type vacuolar membrane
+extrinsic component of fungal-type vacuolar membranes
+extrinsic component of intraperoxisomal membrane
+extrinsic component of intraperoxisomal membranes
+extrinsic component of lumenal side of plastid thylakoid membrane
+extrinsic component of lumenal side of plastid thylakoid membranes
+extrinsic component of lysosome membrane
+extrinsic component of lysosome membranes
+extrinsic component of membrane
+extrinsic component of membranes
+extrinsic component of mitochondrial inner membrane
+extrinsic component of mitochondrial inner membranes
+extrinsic component of mitochondrial outer membrane
+extrinsic component of mitochondrial outer membranes
+extrinsic component of mycolate outer membrane
+extrinsic component of mycolate outer membranes
+extrinsic component of nuclear outer membrane
+extrinsic component of nuclear outer membranes
+extrinsic component of omegasome membrane
+extrinsic component of omegasome membranes
+extrinsic component of organelle membrane
+extrinsic component of organelle membranes
+extrinsic component of periplasmic side of cell outer membrane
+extrinsic component of periplasmic side of cell outer membranes
+extrinsic component of periplasmic side of plasma membrane
+extrinsic component of periplasmic side of plasma membranes
+extrinsic component of plasma membrane
+extrinsic component of plasma membranes
+extrinsic component of plastid inner membrane
+extrinsic component of plastid inner membranes
+extrinsic component of plastid membrane
+extrinsic component of plastid membranes
+extrinsic component of plastid thylakoid membrane
+extrinsic component of plastid thylakoid membranes
+extrinsic component of pre-autophagosomal structure membrane
+extrinsic component of pre-autophagosomal structure membranes
+extrinsic component of stromal side of plastid inner membrane
+extrinsic component of stromal side of plastid inner membranes
+extrinsic component of stromal side of plastid thylakoid membrane
+extrinsic component of stromal side of plastid thylakoid membranes
+extrinsic component of thylakoid membrane
+extrinsic component of thylakoid membranes
+extrinsic component of vacuolar membrane
+extrinsic component of vacuolar membranes
+eyespot apparatus
+eyespot apparatuses
+fascia adherens
+fascia adherenses
+female germ cell nucleus
+female germ cell nucleuses
+female germline ring canal
+female germline ring canal inner rim
+female germline ring canal inner rims
+female germline ring canal outer rim
+female germline ring canal outer rims
+female germline ring canals
+female pronucleus
+female pronucleuses
+fertilization envelope
+fertilization envelopes
+fibril
+fibrillar center
+fibrillar centers
+fibrillary inclusion
+fibrillary inclusions
+fibrils
+filiform apparatus
+filiform apparatuses
+filopodium
+filopodium membrane
+filopodium membranes
+filopodium tip
+filopodium tips
+filopodiums
+filtration diaphragm
+filtration diaphragms
+focal adhesion
+focal adhesions
+food vacuole
+food vacuoles
+foot layer
+foot layers
+formin nucleated actin cable
+formin nucleated actin cables
+free sarcoplasmic reticulum membrane
+free sarcoplasmic reticulum membranes
+fungal-type cell wall
+fungal-type cell walls
+fungal-type vacuole
+fungal-type vacuole lumen
+fungal-type vacuole lumens
+fungal-type vacuole membrane
+fungal-type vacuole membranes
+fungal-type vacuoles
+fusome
+fusomes
+gap junction
+gap junctions
+gas vesicle
+gas vesicle shell
+gas vesicle shells
+gas vesicles
+gemmule
+gemmules
+generative cell nucleus
+generative cell nucleuses
+germ cell nucleus
+germ cell nucleuses
+germ plasm
+germ plasms
+germ tube
+germ tube septin cap
+germ tube septin caps
+germ tube septin ring
+germ tube septin rings
+germ tubes
+germinal vesicle
+germinal vesicles
+germination pore
+germination pores
+germline ring canal
+germline ring canals
+gerontoplast
+gerontoplasts
+giant axon
+giant axons
+glial cell postsynaptic densities
+glial cell postsynaptic density
+glial cell projection
+glial cell projections
+glial cytoplasmic inclusion
+glial cytoplasmic inclusions
+glial limiting end-foot
+glial limiting end-foots
+glycocalyx
+glycocalyxs
+glycogen granule
+glycogen granules
+glycoprotein network
+glycoprotein networks
+glycosome
+glycosome lumen
+glycosome lumens
+glycosome membrane
+glycosome membranes
+glycosomes
+glyoxysomal lumen
+glyoxysomal lumens
+glyoxysomal membrane
+glyoxysomal membranes
+glyoxysome
+glyoxysomes
+goblet cell theca
+goblet cell thecas
+granal stacked thylakoid
+granal stacked thylakoids
+granular component
+granular components
+granular vesicle
+granular vesicles
+granum
+granums
+growing cell tip
+growing cell tips
+growth cone
+growth cone membrane
+growth cone membranes
+growth cones
+gut granule
+gut granule lumen
+gut granule lumens
+gut granule membrane
+gut granule membranes
+gut granules
+half bridge of mitotic spindle pole bodies
+half bridge of mitotic spindle pole body
+half bridge of spindle pole bodies
+half bridge of spindle pole body
+haustorium
+haustoriums
+helical viral capsid
+helical viral capsids
+hemicellulose network
+hemicellulose networks
+hemidesmosome
+hemidesmosomes
+hippocampal mossy fiber
+hippocampal mossy fiber expansion
+hippocampal mossy fiber expansions
+hippocampal mossy fibers
+histone locus bodies
+histone locus body
+horsetail nucleus
+horsetail nucleus leading edge
+horsetail nucleus leading edges
+horsetail nucleuses
+host
+host bacteroid containing symbiosome
+host bacteroid containing symbiosomes
+host caveola
+host caveolas
+host cell
+host cell Cajal bodies
+host cell Cajal body
+host cell Golgi apparatus
+host cell Golgi apparatuses
+host cell Golgi membrane
+host cell Golgi membranes
+host cell PML bodies
+host cell PML body
+host cell chloroplast
+host cell chloroplast part
+host cell chloroplast parts
+host cell chloroplast thylakoid membrane
+host cell chloroplast thylakoid membranes
+host cell chloroplasts
+host cell cytoplasm
+host cell cytoplasm part
+host cell cytoplasm parts
+host cell cytoplasmic vesicle
+host cell cytoplasmic vesicle membrane
+host cell cytoplasmic vesicle membranes
+host cell cytoplasmic vesicles
+host cell cytoplasms
+host cell cytosol
+host cell cytosols
+host cell endocytic vesicle membrane
+host cell endocytic vesicle membranes
+host cell endomembrane system
+host cell endomembrane systems
+host cell endoplasmic reticulum
+host cell endoplasmic reticulum lumen
+host cell endoplasmic reticulum lumens
+host cell endoplasmic reticulum membrane
+host cell endoplasmic reticulum membranes
+host cell endoplasmic reticulum-Golgi intermediate compartment
+host cell endoplasmic reticulum-Golgi intermediate compartment membrane
+host cell endoplasmic reticulum-Golgi intermediate compartment membranes
+host cell endoplasmic reticulum-Golgi intermediate compartments
+host cell endoplasmic reticulums
+host cell endosome
+host cell endosome lumen
+host cell endosome lumens
+host cell endosome membrane
+host cell endosome membranes
+host cell endosomes
+host cell envelope
+host cell envelopes
+host cell filopodium
+host cell filopodiums
+host cell junction
+host cell junctions
+host cell late endosome
+host cell late endosome membrane
+host cell late endosome membranes
+host cell late endosomes
+host cell lipid particle
+host cell lipid particles
+host cell lysosomal membrane
+host cell lysosomal membranes
+host cell lysosome
+host cell lysosomes
+host cell membrane
+host cell membrane pore complex
+host cell membrane pore complexs
+host cell membranes
+host cell mitochondrial envelope
+host cell mitochondrial envelopes
+host cell mitochondrial inner membrane
+host cell mitochondrial inner membranes
+host cell mitochondrial intermembrane space
+host cell mitochondrial intermembrane spaces
+host cell mitochondrial membrane
+host cell mitochondrial membranes
+host cell mitochondrial outer membrane
+host cell mitochondrial outer membranes
+host cell mitochondrion
+host cell mitochondrions
+host cell nuclear envelope
+host cell nuclear envelopes
+host cell nuclear inner membrane
+host cell nuclear inner membranes
+host cell nuclear lamina
+host cell nuclear laminas
+host cell nuclear matrix
+host cell nuclear matrixs
+host cell nuclear membrane
+host cell nuclear membranes
+host cell nuclear outer membrane
+host cell nuclear outer membranes
+host cell nuclear part
+host cell nuclear parts
+host cell nucleolus
+host cell nucleoluses
+host cell nucleoplasm
+host cell nucleoplasms
+host cell nucleus
+host cell nucleuses
+host cell outer membrane
+host cell outer membranes
+host cell part
+host cell parts
+host cell perinuclear region of cytoplasm
+host cell perinuclear region of cytoplasms
+host cell peripheries
+host cell periphery
+host cell periplasmic space
+host cell periplasmic spaces
+host cell plasma membrane
+host cell plasma membranes
+host cell plasmodesma
+host cell plasmodesmas
+host cell plastid
+host cell plastids
+host cell presynaptic membrane
+host cell presynaptic membranes
+host cell projection
+host cell projections
+host cell rough endoplasmic reticulum
+host cell rough endoplasmic reticulum membrane
+host cell rough endoplasmic reticulum membranes
+host cell rough endoplasmic reticulums
+host cell smooth endoplasmic reticulum
+host cell smooth endoplasmic reticulum membrane
+host cell smooth endoplasmic reticulum membranes
+host cell smooth endoplasmic reticulums
+host cell surface
+host cell surfaces
+host cell synapse
+host cell synapses
+host cell synaptic vesicle
+host cell synaptic vesicle membrane
+host cell synaptic vesicle membranes
+host cell synaptic vesicles
+host cell viral assembly compartment
+host cell viral assembly compartments
+host cell viral nucleoid
+host cell viral nucleoids
+host cell wall
+host cell walls
+host cells
+host chromosome
+host chromosomes
+host cytoskeleton
+host cytoskeletons
+host intracellular membrane bounded organelle
+host intracellular membrane bounded organelles
+host intracellular organelle
+host intracellular organelles
+host intracellular part
+host intracellular parts
+host multivesicular bodies
+host multivesicular body
+host organelle outer membrane
+host organelle outer membranes
+host outer membrane
+host outer membranes
+host peribacteroid fluid
+host peribacteroid fluids
+host peribacteroid membrane
+host peribacteroid membranes
+host symbiosome
+host symbiosomes
+host thylakoid
+host thylakoid membrane
+host thylakoid membranes
+host thylakoids
+host-symbiont bicellular tight junction
+host-symbiont bicellular tight junctions
+hosts
+hyaline inclusion
+hyaline inclusions
+hyaline layer
+hyaline layers
+hyaluranon cable
+hyaluranon cables
+hydrogenosomal membrane
+hydrogenosomal membranes
+hydrogenosome
+hydrogenosome lumen
+hydrogenosome lumens
+hydrogenosomes
+hyphal cell wall
+hyphal cell walls
+hyphal septin band
+hyphal septin bands
+hyphal septin cap
+hyphal septin caps
+hyphal septin ring
+hyphal septin rings
+hyphal tip
+hyphal tips
+hypolemmal cisterna
+hypolemmal cisternas
+icosahedral viral capsid
+icosahedral viral capsid , collar
+icosahedral viral capsid , collar fiber
+icosahedral viral capsid , collar fibers
+icosahedral viral capsid , collars
+icosahedral viral capsid , neck
+icosahedral viral capsid , neck fiber
+icosahedral viral capsid , neck fibers
+icosahedral viral capsid , necks
+icosahedral viral capsid , spike
+icosahedral viral capsid , spikes
+icosahedral viral capsids
+immunological synapse
+immunological synapses
+inactive sex chromosome
+inactive sex chromosomes
+incipient cellular bud site
+incipient cellular bud sites
+inclusion bodies
+inclusion body
+infected host cell surface knob
+infected host cell surface knobs
+inhibitory neuromuscular junction
+inhibitory neuromuscular junction of somatic myotube
+inhibitory neuromuscular junction of somatic myotubes
+inhibitory neuromuscular junctions
+inhibitory synapse
+inhibitory synapses
+inner acrosomal membrane
+inner acrosomal membranes
+inner dense plaque of desmosome
+inner dense plaque of desmosomes
+inner layer of spore wall
+inner layer of spore walls
+inner membrane complex
+inner membrane complexs
+inner mucus layer
+inner mucus layers
+inner plaque of mitotic spindle pole bodies
+inner plaque of mitotic spindle pole body
+inner plaque of spindle pole bodies
+inner plaque of spindle pole body
+insulin responsive compartment
+insulin responsive compartments
+integral component of Golgi cis cisterna membrane
+integral component of Golgi cis cisterna membranes
+integral component of Golgi medial cisterna membrane
+integral component of Golgi medial cisterna membranes
+integral component of Golgi membrane
+integral component of Golgi membranes
+integral component of Golgi trans cisterna membrane
+integral component of Golgi trans cisterna membranes
+integral component of autophagic vacuole membrane
+integral component of autophagic vacuole membranes
+integral component of cell outer membrane
+integral component of cell outer membranes
+integral component of chloroplast inner membrane
+integral component of chloroplast inner membranes
+integral component of chloroplast outer membrane
+integral component of chloroplast outer membranes
+integral component of contractile vacuolar membrane
+integral component of contractile vacuolar membranes
+integral component of cytoplasmic side of endoplasmic reticulum membrane
+integral component of cytoplasmic side of endoplasmic reticulum membranes
+integral component of endoplasmic reticulum membrane
+integral component of endoplasmic reticulum membranes
+integral component of endoplasmic reticulum-Golgi intermediate compartment ( ERGIC ) membrane
+integral component of endoplasmic reticulum-Golgi intermediate compartment ( ERGIC ) membranes
+integral component of endosome membrane
+integral component of endosome membranes
+integral component of external side of plasma membrane
+integral component of external side of plasma membranes
+integral component of fungal-type vacuolar membrane
+integral component of fungal-type vacuolar membranes
+integral component of lumenal side of endoplasmic reticulum membrane
+integral component of lumenal side of endoplasmic reticulum membranes
+integral component of membrane
+integral component of membranes
+integral component of mitochondrial inner membrane
+integral component of mitochondrial inner membranes
+integral component of mitochondrial membrane
+integral component of mitochondrial membranes
+integral component of mitochondrial outer membrane
+integral component of mitochondrial outer membranes
+integral component of muscle cell projection membrane
+integral component of muscle cell projection membranes
+integral component of mycolate outer membrane
+integral component of mycolate outer membranes
+integral component of nuclear inner membrane
+integral component of nuclear inner membranes
+integral component of nuclear outer membrane
+integral component of nuclear outer membranes
+integral component of omegasome membrane
+integral component of omegasome membranes
+integral component of organelle membrane
+integral component of organelle membranes
+integral component of peroxisomal membrane
+integral component of peroxisomal membranes
+integral component of plasma membrane
+integral component of plasma membranes
+integral component of plastid inner membrane
+integral component of plastid inner membranes
+integral component of plastid membrane
+integral component of plastid membranes
+integral component of plastid outer membrane
+integral component of plastid outer membranes
+integral component of pre-autophagosomal structure membrane
+integral component of pre-autophagosomal structure membranes
+integral component of synaptic vesicle membrane
+integral component of synaptic vesicle membranes
+integral component of the cytoplasmic side of the plasma membrane
+integral component of the cytoplasmic side of the plasma membranes
+integral component of thylakoid membrane
+integral component of thylakoid membranes
+integral component of vacuolar membrane
+integral component of vacuolar membranes
+integral to host endoplasmic reticulum membrane
+integral to host endoplasmic reticulum membranes
+integral to membrane of host cell
+integral to membrane of host cells
+inter-Golgi transport vesicle
+inter-Golgi transport vesicle membrane
+inter-Golgi transport vesicle membranes
+inter-Golgi transport vesicles
+intercalated disc
+intercalated discs
+intercellular bridge
+intercellular bridges
+intercellular canaliculus
+intercellular canaliculuses
+interchromatin granule
+interchromatin granules
+intermediate filament cytoskeleton
+intermediate filament cytoskeletons
+intermediate layer of mitotic spindle pole bodies
+intermediate layer of mitotic spindle pole body
+intermediate layer of spindle pole bodies
+intermediate layer of spindle pole body
+internal side of mycolate outer membrane
+internal side of mycolate outer membranes
+internode region of axon
+internode region of axons
+interphase microtubule organizing center
+interphase microtubule organizing centers
+interphotoreceptor matrix
+interphotoreceptor matrixs
+interstitial matrix
+interstitial matrixs
+intine
+intines
+intracellular
+intracellular canaliculus
+intracellular canaliculuses
+intracellular immature spore
+intracellular immature spores
+intracellular membrane bounded organelle
+intracellular membrane bounded organelles
+intracellular non-membrane-bounded organelle
+intracellular non-membrane-bounded organelles
+intracellular organelle
+intracellular organelle lumen
+intracellular organelle lumens
+intracellular organelle part
+intracellular organelle parts
+intracellular organelles
+intracellular part
+intracellular parts
+intracellular region of host
+intracellular region of hosts
+intracellulars
+intrinsic component of Golgi cis cisterna membrane
+intrinsic component of Golgi cis cisterna membranes
+intrinsic component of Golgi medial cisterna membrane
+intrinsic component of Golgi medial cisterna membranes
+intrinsic component of Golgi membrane
+intrinsic component of Golgi membranes
+intrinsic component of Golgi trans cisterna membrane
+intrinsic component of Golgi trans cisterna membranes
+intrinsic component of autophagic vacuole membrane
+intrinsic component of autophagic vacuole membranes
+intrinsic component of cell outer membrane
+intrinsic component of cell outer membranes
+intrinsic component of chloroplast inner membrane
+intrinsic component of chloroplast inner membranes
+intrinsic component of chloroplast outer membrane
+intrinsic component of chloroplast outer membranes
+intrinsic component of contractile vacuolar membrane
+intrinsic component of contractile vacuolar membranes
+intrinsic component of endoplasmic reticulum membrane
+intrinsic component of endoplasmic reticulum membranes
+intrinsic component of endoplasmic reticulum-Golgi intermediate compartment ( ERGIC ) membrane
+intrinsic component of endoplasmic reticulum-Golgi intermediate compartment ( ERGIC ) membranes
+intrinsic component of endosome membrane
+intrinsic component of endosome membranes
+intrinsic component of external side of cell outer membrane
+intrinsic component of external side of cell outer membranes
+intrinsic component of external side of plasma membrane
+intrinsic component of external side of plasma membranes
+intrinsic component of fungal-type vacuolar membrane
+intrinsic component of fungal-type vacuolar membranes
+intrinsic component of membrane
+intrinsic component of membranes
+intrinsic component of mitochondrial inner membrane
+intrinsic component of mitochondrial inner membranes
+intrinsic component of mitochondrial membrane
+intrinsic component of mitochondrial membranes
+intrinsic component of mitochondrial outer membrane
+intrinsic component of mitochondrial outer membranes
+intrinsic component of mycolate outer membrane
+intrinsic component of mycolate outer membranes
+intrinsic component of nuclear inner membrane
+intrinsic component of nuclear inner membranes
+intrinsic component of nuclear outer membrane
+intrinsic component of nuclear outer membranes
+intrinsic component of omegasome membrane
+intrinsic component of omegasome membranes
+intrinsic component of organelle membrane
+intrinsic component of organelle membranes
+intrinsic component of periplasmic side of cell outer membrane
+intrinsic component of periplasmic side of cell outer membranes
+intrinsic component of periplasmic side of plasma membrane
+intrinsic component of periplasmic side of plasma membranes
+intrinsic component of peroxisomal membrane
+intrinsic component of peroxisomal membranes
+intrinsic component of plasma membrane
+intrinsic component of plasma membranes
+intrinsic component of plastid inner membrane
+intrinsic component of plastid inner membranes
+intrinsic component of plastid membrane
+intrinsic component of plastid membranes
+intrinsic component of plastid outer membrane
+intrinsic component of plastid outer membranes
+intrinsic component of pre-autophagosomal structure membrane
+intrinsic component of pre-autophagosomal structure membranes
+intrinsic component of synaptic vesicle membrane
+intrinsic component of synaptic vesicle membranes
+intrinsic component of the cytoplasmic side of the plasma membrane
+intrinsic component of the cytoplasmic side of the plasma membranes
+intrinsic component of thylakoid membrane
+intrinsic component of thylakoid membranes
+intrinsic component of vacuolar membrane
+intrinsic component of vacuolar membranes
+invadopodium
+invadopodium membrane
+invadopodium membranes
+invadopodiums
+iridosome
+iridosomes
+junctional sarcoplasmic reticulum membrane
+junctional sarcoplasmic reticulum membranes
+juxtaparanode region of axon
+juxtaparanode region of axons
+karyomere
+karyomeres
+keratohyalin granule
+keratohyalin granules
+kinetoplast
+kinetoplasts
+kinociliary basal bodies
+kinociliary basal body
+kinocilium
+kinociliums
+lamellar bodies
+lamellar body
+lamellar body membrane
+lamellar body membranes
+lamellipodium
+lamellipodium membrane
+lamellipodium membranes
+lamellipodiums
+lamina densa
+lamina densas
+lamina lucida
+lamina lucidas
+lamina reticularis
+lamina reticularises
+laminated bodies
+laminated body
+late endosome
+late endosome lumen
+late endosome lumens
+late endosome membrane
+late endosome membranes
+late endosomes
+late recombination nodule
+late recombination nodules
+lateral cell cortex
+lateral cell cortexs
+lateral element
+lateral elements
+lateral loop
+lateral loops
+lateral part of cell
+lateral part of cells
+lateral part of motile cell
+lateral part of motile cells
+lateral plasma membrane
+lateral plasma membranes
+lateral shield
+lateral shields
+leading edge membrane
+leading edge membranes
+leaf papilla
+leaf papillas
+leaflet of membrane bilayer
+leaflet of membrane bilayers
+left anterior basal bodies
+left anterior basal body
+left anterior flagellum
+left anterior flagellums
+left caudal basal bodies
+left caudal basal body
+left caudal flagellum
+left caudal flagellums
+left lateral basal body pair
+left lateral basal body pairs
+left middle basal body pair
+left middle basal body pairs
+left nucleus
+left nucleuses
+left posteriolateral basal bodies
+left posteriolateral basal body
+left posteriolateral flagellum
+left posteriolateral flagellums
+left tetrad
+left tetrads
+left ventral basal bodies
+left ventral basal body
+left ventral flagellum
+left ventral flagellums
+leucoplast
+leucoplast stroma
+leucoplast stromas
+leucoplasts
+leucosome
+leucosomes
+lignin network
+lignin networks
+linear element
+linear elements
+lipid particle
+lipid particles
+lobed nucleus
+lobed nucleuses
+longitudinal flagellum
+longitudinal flagellums
+longitudinal sarcoplasmic reticulum
+longitudinal sarcoplasmic reticulum lumen
+longitudinal sarcoplasmic reticulum lumens
+longitudinal sarcoplasmic reticulums
+longitudinal side of cell surface
+longitudinal side of cell surfaces
+lower tip-link densities
+lower tip-link density
+lumenal side of Golgi membrane
+lumenal side of Golgi membranes
+lumenal side of early endosome membrane
+lumenal side of early endosome membranes
+lumenal side of endoplasmic reticulum membrane
+lumenal side of endoplasmic reticulum membranes
+lumenal side of endosome membrane
+lumenal side of endosome membranes
+lumenal side of late endosome membrane
+lumenal side of late endosome membranes
+lumenal side of lysosomal membrane
+lumenal side of lysosomal membranes
+lumenal side of membrane
+lumenal side of membranes
+lumenal side of plastid thylakoid membrane
+lumenal side of plastid thylakoid membranes
+lumenal side of rough endoplasmic reticulum membrane
+lumenal side of rough endoplasmic reticulum membranes
+lumenal side of smooth endoplasmic reticulum membrane
+lumenal side of smooth endoplasmic reticulum membranes
+lumenal side of trans-Golgi network transport vesicle membrane
+lumenal side of trans-Golgi network transport vesicle membranes
+lumenal side of transport vesicle membrane
+lumenal side of transport vesicle membranes
+lysosomal glycocalyx
+lysosomal glycocalyxs
+lysosomal lumen
+lysosomal lumens
+lysosomal membrane
+lysosomal membranes
+lysosome
+lysosomes
+lytic vacuole
+lytic vacuole within protein storage vacuole
+lytic vacuole within protein storage vacuoles
+lytic vacuoles
+macromolecular complex
+macromolecular complexs
+macronucleus
+macronucleuses
+macropinocytic cup
+macropinocytic cup cytoskeleton
+macropinocytic cup cytoskeletons
+macropinocytic cup membrane
+macropinocytic cup membranes
+macropinocytic cups
+macropinosome
+macropinosomes
+main axon
+main axons
+major mitochondrial derivative
+major mitochondrial derivatives
+male germ cell nucleus
+male germ cell nucleuses
+male germline ring canal
+male germline ring canals
+male pronucleus
+male pronucleuses
+manchette
+manchettes
+mannosome
+mannosomes
+mast cell granule
+mast cell granules
+mating projection
+mating projection base
+mating projection bases
+mating projection membrane
+mating projection membranes
+mating projection septin band
+mating projection septin bands
+mating projection septin ring
+mating projection septin rings
+mating projection tip
+mating projection tip membrane
+mating projection tip membranes
+mating projection tips
+mating projections
+medial cortex
+medial cortex septin ring
+medial cortex septin rings
+medial cortexs
+medial layer of collagen and cuticulin based cuticle extracellular matrix
+medial layer of collagen and cuticulin based cuticle extracellular matrixs
+medial membrane band
+medial membrane bands
+median bodies
+median body
+megagametophyte egg cell nucleus
+megagametophyte egg cell nucleuses
+megasome
+megasomes
+megasporocyte nucleus
+megasporocyte nucleuses
+meiotic spindle
+meiotic spindle midzone
+meiotic spindle midzones
+meiotic spindle pole
+meiotic spindle pole bodies
+meiotic spindle pole body
+meiotic spindle poles
+meiotic spindles
+melanosome
+melanosome lumen
+melanosome lumens
+melanosome membrane
+melanosome membranes
+melanosomes
+membrane
+membrane bounded organelle
+membrane bounded organelles
+membrane bounded vesicle
+membrane bounded vesicles
+membrane enclosed lumen
+membrane enclosed lumens
+membrane part
+membrane parts
+membrane raft
+membrane rafts
+membrane region
+membrane regions
+membrane stack
+membrane stacks
+membranes
+merozoite dense granule
+merozoite dense granule membrane
+merozoite dense granule membranes
+merozoite dense granules
+mesaxon
+mesaxons
+mesosome
+mesosomes
+metaphase plate
+metaphase plates
+methane oxidizing organelle
+methane oxidizing organelles
+microbodies
+microbody
+microbody lumen
+microbody lumens
+microbody membrane
+microbody membranes
+microbody part
+microbody parts
+microfibril
+microfibrils
+microneme
+microneme lumen
+microneme lumens
+microneme membrane
+microneme membranes
+micronemes
+micronucleus
+micronucleuses
+micropexophagy specific membrane apparatus
+micropexophagy specific membrane apparatuses
+micropinosome
+micropinosomes
+micropyle
+micropyles
+microspike
+microspikes
+microsporocyte nucleus
+microsporocyte nucleuses
+microtubule bundle
+microtubule bundles
+microtubule cytoskeleton
+microtubule cytoskeletons
+microtubule organizing center
+microtubule organizing center attachment site
+microtubule organizing center attachment sites
+microtubule organizing center part
+microtubule organizing center parts
+microtubule organizing centers
+microvillar actin bundle
+microvillar actin bundles
+microvillus
+microvillus membrane
+microvillus membranes
+microvilluses
+midbodies
+midbody
+middle lamella
+middle lamellas
+minor mitochondrial derivative
+minor mitochondrial derivatives
+mitochondrial chromosome
+mitochondrial chromosomes
+mitochondrial cloud
+mitochondrial clouds
+mitochondrial crista
+mitochondrial crista junction
+mitochondrial crista junctions
+mitochondrial cristas
+mitochondrial derivative
+mitochondrial derivatives
+mitochondrial envelope
+mitochondrial envelopes
+mitochondrial inner boundary membrane
+mitochondrial inner boundary membranes
+mitochondrial inner membrane
+mitochondrial inner membranes
+mitochondrial intermembrane space
+mitochondrial intermembrane spaces
+mitochondrial intracristal space
+mitochondrial intracristal spaces
+mitochondrial matrix
+mitochondrial matrixs
+mitochondrial membrane
+mitochondrial membrane part
+mitochondrial membrane parts
+mitochondrial membranes
+mitochondrial nucleoid
+mitochondrial nucleoids
+mitochondrial outer membrane
+mitochondrial outer membranes
+mitochondrial part
+mitochondrial parts
+mitochondrial respiratory chain
+mitochondrial respiratory chains
+mitochondrion
+mitochondrion associated adherens complex
+mitochondrion associated adherens complexs
+mitochondrions
+mitosome
+mitosomes
+mitotic spindle
+mitotic spindle midzone
+mitotic spindle midzones
+mitotic spindle pole
+mitotic spindle pole bodies
+mitotic spindle pole body
+mitotic spindle poles
+mitotic spindles
+monolayer surrounded lipid storage bodies
+monolayer surrounded lipid storage body
+monolayer surrounded lipid storage body outer lipid monolayer
+monolayer surrounded lipid storage body outer lipid monolayers
+mononeme
+mononemes
+mossy fiber rosette
+mossy fiber rosettes
+motile cilium
+motile ciliums
+motile primary cilium
+motile primary ciliums
+mucin granule
+mucin granules
+mucocyst
+mucocysts
+mucus layer
+mucus layers
+multipartite viral genome
+multipartite viral genomes
+multivesicular bodies
+multivesicular body
+multivesicular body , internal vesicle
+multivesicular body , internal vesicle lumen
+multivesicular body , internal vesicle lumens
+multivesicular body , internal vesicle membrane
+multivesicular body , internal vesicle membranes
+multivesicular body , internal vesicles
+multivesicular body lumen
+multivesicular body lumens
+multivesicular body membrane
+multivesicular body membranes
+muscle cell postsynaptic densities
+muscle cell postsynaptic density
+muscle cell projection
+muscle cell projection membrane
+muscle cell projection membranes
+muscle cell projections
+muscle tendon junction
+muscle tendon junctions
+muscle thin filament tropomyosin
+muscle thin filament tropomyosins
+mycolate outer membrane
+mycolate outer membranes
+myelin sheath
+myelin sheath abaxonal region
+myelin sheath abaxonal regions
+myelin sheath adaxonal region
+myelin sheath adaxonal regions
+myelin sheaths
+myofibril
+myofibrils
+myofilament
+myofilaments
+neck portion of tanycyte
+neck portion of tanycytes
+negative sense viral genome
+negative sense viral genomes
+nematocyst
+nematocysts
+nematosome
+nematosomes
+nephrocyte diaphragm
+nephrocyte diaphragms
+neurofibrillary tangle
+neurofibrillary tangles
+neurofilament cytoskeleton
+neurofilament cytoskeletons
+neuromuscular junction
+neuromuscular junction of myotube
+neuromuscular junction of myotubes
+neuromuscular junction of skeletal muscle fiber
+neuromuscular junction of skeletal muscle fibers
+neuromuscular junction of somatic muscle
+neuromuscular junction of somatic muscle myotube
+neuromuscular junction of somatic muscle myotubes
+neuromuscular junction of somatic muscles
+neuromuscular junctions
+neuron part
+neuron parts
+neuron projection
+neuron projection membrane
+neuron projection membranes
+neuron projection terminus
+neuron projection terminuses
+neuron projections
+neuron spine
+neuron spines
+neuronal cell bodies
+neuronal cell body
+neuronal cell body membrane
+neuronal cell body membranes
+neuronal postsynaptic densities
+neuronal postsynaptic density
+neurosecretory vesicle
+neurosecretory vesicles
+new growing cell tip
+new growing cell tips
+new mitotic spindle pole bodies
+new mitotic spindle pole body
+nexine
+nexines
+node of Ranvier
+node of Ranviers
+non growing cell tip
+non growing cell tips
+non segmented viral genome
+non segmented viral genomes
+non-membrane-bounded organelle
+non-membrane-bounded organelles
+nonmotile primary cilium
+nonmotile primary ciliums
+nuclear bodies
+nuclear body
+nuclear chromosome
+nuclear chromosome , telomeric region
+nuclear chromosome , telomeric regions
+nuclear chromosome part
+nuclear chromosome parts
+nuclear chromosomes
+nuclear dicing bodies
+nuclear dicing body
+nuclear envelope
+nuclear envelope lumen
+nuclear envelope lumens
+nuclear envelopes
+nuclear inclusion bodies
+nuclear inclusion body
+nuclear inner membrane
+nuclear inner membranes
+nuclear lamina
+nuclear laminas
+nuclear lumen
+nuclear lumens
+nuclear matrix
+nuclear matrixs
+nuclear membrane
+nuclear membrane part
+nuclear membrane parts
+nuclear membranes
+nuclear outer membrane
+nuclear outer membrane-endoplasmic reticulum membrane network
+nuclear outer membrane-endoplasmic reticulum membrane networks
+nuclear outer membranes
+nuclear part
+nuclear parts
+nuclear peripheries
+nuclear periphery
+nuclear replication fork
+nuclear replication forks
+nuclear speck
+nuclear specks
+nuclear viral factories
+nuclear viral factory
+nucleoid
+nucleoids
+nucleolar part
+nucleolar parts
+nucleolus
+nucleoluses
+nucleomorph
+nucleomorphs
+nucleoplasm
+nucleoplasm part
+nucleoplasm parts
+nucleoplasmic reticulum
+nucleoplasmic reticulums
+nucleoplasms
+nucleus
+nucleus-vacuole junction
+nucleus-vacuole junctions
+nucleuses
+occluding junction
+occluding junctions
+old cell tip after activation of bipolar cell growth
+old cell tip after activation of bipolar cell growths
+old growing cell tip
+old growing cell tips
+old mitotic spindle pole bodies
+old mitotic spindle pole body
+omega speckle
+omega speckles
+omegasome
+omegasome membrane
+omegasome membranes
+omegasomes
+oral apparatus
+oral apparatuses
+organellar chromatophore
+organellar chromatophore inner membrane
+organellar chromatophore inner membranes
+organellar chromatophore intermembrane space
+organellar chromatophore intermembrane spaces
+organellar chromatophore membrane
+organellar chromatophore membranes
+organellar chromatophore outer membrane
+organellar chromatophore outer membranes
+organellar chromatophore thylakoid
+organellar chromatophore thylakoid lumen
+organellar chromatophore thylakoid lumens
+organellar chromatophore thylakoid membrane
+organellar chromatophore thylakoid membranes
+organellar chromatophore thylakoids
+organellar chromatophores
+organelle
+organelle enclosing lipid monolayer
+organelle enclosing lipid monolayers
+organelle envelope
+organelle envelope lumen
+organelle envelope lumens
+organelle envelopes
+organelle inner membrane
+organelle inner membranes
+organelle lumen
+organelle lumens
+organelle membrane
+organelle membrane contact site
+organelle membrane contact sites
+organelle membranes
+organelle outer membrane
+organelle outer membranes
+organelle part
+organelle parts
+organelle subcompartment
+organelle subcompartments
+organelles
+organomineral extracellular matrix
+organomineral extracellular matrixs
+orthogonal arraies
+orthogonal array
+osmiophilic bodies
+osmiophilic body
+other organism
+other organism cell
+other organism cell membrane
+other organism cell membranes
+other organism cells
+other organism cytoplasm
+other organism cytoplasms
+other organism membrane
+other organism membranes
+other organism part
+other organism parts
+other organism postsynaptic membrane
+other organism postsynaptic membranes
+other organism presynaptic membrane
+other organism presynaptic membranes
+other organisms
+outer acrosomal membrane
+outer acrosomal membranes
+outer dense fiber
+outer dense fibers
+outer dense plaque of desmosome
+outer dense plaque of desmosomes
+outer endospore membrane
+outer endospore membranes
+outer membrane
+outer membrane bounded periplasmic space
+outer membrane bounded periplasmic spaces
+outer membranes
+outer mucus layer
+outer mucus layers
+outer plaque of mitotic spindle pole bodies
+outer plaque of mitotic spindle pole body
+outer plaque of spindle pole bodies
+outer plaque of spindle pole body
+pairing center
+pairing centers
+parallel actin filament bundle
+parallel actin filament bundles
+parallel fiber
+parallel fibers
+paranodal junction
+paranodal junctions
+paranode region of axon
+paranode region of axons
+paraspeckles
+paraspeckleses
+pectic matrix
+pectic matrixs
+peg and socket contact
+peg and socket contacts
+pellicle
+pellicles
+peptidoglycan based cell wall
+peptidoglycan based cell walls
+perforation plate
+perforation plates
+periarbuscular membrane
+periarbuscular membranes
+peribacteroid fluid
+peribacteroid fluids
+peribacteroid membrane
+peribacteroid membranes
+pericanalicular vesicle
+pericanalicular vesicles
+pericellular basket
+pericellular baskets
+pericentriolar material
+pericentriolar materials
+periciliary membrane compartment
+periciliary membrane compartments
+perikaryon
+perikaryons
+perineuronal net
+perineuronal nets
+perinuclear endoplasmic reticulum
+perinuclear endoplasmic reticulum membrane
+perinuclear endoplasmic reticulum membranes
+perinuclear endoplasmic reticulums
+perinuclear region of cytoplasm
+perinuclear region of cytoplasms
+perinuclear theca
+perinuclear thecas
+perinucleolar chromocenter
+perinucleolar chromocenters
+perinucleolar compartment
+perinucleolar compartments
+periplasmic flagellum
+periplasmic flagellums
+periplasmic side of cell outer membrane
+periplasmic side of cell outer membranes
+periplasmic side of plasma membrane
+periplasmic side of plasma membranes
+periplasmic space
+periplasmic spaces
+peristromal region viral factories
+peristromal region viral factory
+perivitelline space
+perivitelline spaces
+peroxisomal matrix
+peroxisomal matrixs
+peroxisomal membrane
+peroxisomal membranes
+peroxisomal part
+peroxisomal parts
+peroxisome
+peroxisomes
+pexophagosome
+pexophagosomes
+phagocytic cup
+phagocytic cup base
+phagocytic cup bases
+phagocytic cup lip
+phagocytic cup lips
+phagocytic cups
+phagocytic vesicle
+phagocytic vesicle lumen
+phagocytic vesicle lumens
+phagocytic vesicle membrane
+phagocytic vesicle membranes
+phagocytic vesicles
+phagolysosome
+phagolysosome membrane
+phagolysosome membranes
+phagolysosomes
+photoreceptor connecting cilium
+photoreceptor connecting ciliums
+photoreceptor disc membrane
+photoreceptor disc membranes
+photoreceptor inner segment
+photoreceptor inner segment membrane
+photoreceptor inner segment membranes
+photoreceptor inner segments
+photoreceptor outer segment
+photoreceptor outer segment membrane
+photoreceptor outer segment membranes
+photoreceptor outer segments
+photosynthetic membrane
+photosynthetic membranes
+phragmoplast
+phragmoplasts
+phragmosome
+phragmosomes
+piccolo-bassoon transport vesicle
+piccolo-bassoon transport vesicles
+pigment granule
+pigment granules
+pilus
+pilus part
+pilus parts
+pilus shaft
+pilus shafts
+pilus tip
+pilus tips
+piluses
+pinceau fiber
+pinceau fibers
+pinosome
+pinosomes
+pirellulosome
+pirellulosomes
+plant cell papilla
+plant cell papillas
+plant-type cell wall
+plant-type cell walls
+plant-type vacuole
+plant-type vacuole lumen
+plant-type vacuole lumens
+plant-type vacuole membrane
+plant-type vacuole membranes
+plant-type vacuoles
+plasma membrane
+plasma membrane derived chromatophore
+plasma membrane derived chromatophore membrane
+plasma membrane derived chromatophore membranes
+plasma membrane derived chromatophores
+plasma membrane derived thylakoid lumen
+plasma membrane derived thylakoid lumens
+plasma membrane derived thylakoid membrane
+plasma membrane derived thylakoid membranes
+plasma membrane of cell tip
+plasma membrane of cell tips
+plasma membrane of growing cell tip
+plasma membrane of growing cell tips
+plasma membrane part
+plasma membrane part of cell junction
+plasma membrane part of cell junctions
+plasma membrane part of cell-substrate junction .
+plasma membrane part of cell-substrate junction.s
+plasma membrane part of hemidesmosome
+plasma membrane part of hemidesmosomes
+plasma membrane parts
+plasma membrane raft
+plasma membrane rafts
+plasma membrane region
+plasma membrane regions
+plasma membrane respiratory chain
+plasma membrane respiratory chains
+plasma membranes
+plasmodesma
+plasmodesmas
+plasmodesmatal cytoplasmic sleeve
+plasmodesmatal cytoplasmic sleeves
+plasmodesmatal desmotubule
+plasmodesmatal desmotubules
+plasmodesmatal endoplasmic reticulum
+plasmodesmatal endoplasmic reticulums
+plasmodesmatal plasma membrane
+plasmodesmatal plasma membranes
+plastid
+plastid chromosome
+plastid chromosomes
+plastid envelope
+plastid envelopes
+plastid inner membrane
+plastid inner membranes
+plastid intermembrane space
+plastid intermembrane spaces
+plastid membrane
+plastid membranes
+plastid nucleoid
+plastid nucleoids
+plastid outer membrane
+plastid outer membranes
+plastid part
+plastid parts
+plastid stroma
+plastid stromas
+plastid thylakoid
+plastid thylakoid lumen
+plastid thylakoid lumens
+plastid thylakoid membrane
+plastid thylakoid membranes
+plastid thylakoids
+plastids
+plastoglobule
+plastoglobules
+platelet alpha granule
+platelet alpha granule lumen
+platelet alpha granule lumens
+platelet alpha granule membrane
+platelet alpha granule membranes
+platelet alpha granules
+platelet dense granule
+platelet dense granule lumen
+platelet dense granule lumens
+platelet dense granule membrane
+platelet dense granule membranes
+platelet dense granules
+platelet dense tubular network
+platelet dense tubular network lumen
+platelet dense tubular network lumens
+platelet dense tubular network membrane
+platelet dense tubular network membranes
+platelet dense tubular networks
+pleated septate junction
+pleated septate junctions
+polar nucleus
+polar nucleuses
+polar ring of apical complex
+polar ring of apical complexs
+polar tube
+polar tubes
+pole plasm
+pole plasms
+pollen coat
+pollen coats
+pollen tube
+pollen tube tip
+pollen tube tips
+pollen tubes
+pollen wall
+pollen walls
+polyhedral organelle
+polyhedral organelles
+polytene chromosome
+polytene chromosome , telomeric region
+polytene chromosome , telomeric regions
+polytene chromosome band
+polytene chromosome bands
+polytene chromosome chromocenter
+polytene chromosome chromocenters
+polytene chromosome ectopic fiber
+polytene chromosome ectopic fibers
+polytene chromosome interband
+polytene chromosome interbands
+polytene chromosome puff
+polytene chromosome puffs
+polytene chromosome weak point
+polytene chromosome weak points
+polytene chromosomes
+porosome
+porosomes
+porous cell septum
+porous cell septums
+positive sense viral genome
+positive sense viral genomes
+post-anaphase microtubule arraies
+post-anaphase microtubule array
+post-lysosomal vacuole
+post-lysosomal vacuoles
+postsynaptic densities
+postsynaptic density
+postsynaptic membrane
+postsynaptic membranes
+pre-autophagosomal structure
+pre-autophagosomal structure membrane
+pre-autophagosomal structure membranes
+pre-autophagosomal structures
+preprophase band
+preprophase bands
+presynaptic active zone
+presynaptic active zone dense projection
+presynaptic active zone dense projections
+presynaptic active zone membrane
+presynaptic active zone membranes
+presynaptic active zones
+presynaptic cytoskeletal matrix assembled at active zones
+presynaptic cytoskeletal matrix assembled at active zoneses
+presynaptic grid
+presynaptic grids
+presynaptic membrane
+presynaptic membranes
+presynaptic periactive zone
+presynaptic periactive zones
+primary cell septum
+primary cell septums
+primary cell wall
+primary cell walls
+primary cilium
+primary ciliums
+primary endosperm nucleus
+primary endosperm nucleuses
+primary lysosome
+primary lysosomes
+primary plasmodesma
+primary plasmodesmas
+prominosome
+prominosomes
+pronucleus
+pronucleuses
+propanediol degradation polyhedral organelle
+propanediol degradation polyhedral organelles
+proplastid
+proplastid nucleoid
+proplastid nucleoids
+proplastid stroma
+proplastid stromas
+proplastids
+prospore contractile ring
+prospore contractile rings
+prospore membrane
+prospore membrane leading edge
+prospore membrane leading edges
+prospore membrane spindle pole body attachment site
+prospore membrane spindle pole body attachment sites
+prospore membranes
+prospore septin filament arraies
+prospore septin filament array
+prospore septin ring
+prospore septin rings
+protein bodies
+protein body
+protein storage vacuole
+protein storage vacuole lumen
+protein storage vacuole lumens
+protein storage vacuole membrane
+protein storage vacuole membranes
+protein storage vacuoles
+proteinaceous extracellular matrix
+proteinaceous extracellular matrixs
+proteinoplast
+proteinoplasts
+prothylakoid
+prothylakoid membrane
+prothylakoid membranes
+prothylakoids
+provirus
+proviruses
+proximal dendrite
+proximal dendrites
+pseudohyphal septin ring
+pseudohyphal septin rings
+pseudopodium
+pseudopodium membrane
+pseudopodium membranes
+pseudopodiums
+pterinosome
+pterinosomes
+puncta adhaerentia
+puncta adhaerentias
+pyrenoid
+pyrenoids
+recombination nodule
+recombination nodules
+recurrent axon collateral
+recurrent axon collaterals
+recycling endosome
+recycling endosome lumen
+recycling endosome lumens
+recycling endosome membrane
+recycling endosome membranes
+recycling endosomes
+replication compartment
+replication compartments
+replication fork
+replication forks
+respiratory chain
+respiratory chains
+retrotransposon nucleocapsid
+retrotransposon nucleocapsids
+rhabdomere
+rhabdomere membrane
+rhabdomere membranes
+rhabdomere microvillus
+rhabdomere microvillus membrane
+rhabdomere microvillus membranes
+rhabdomere microvilluses
+rhabdomeres
+rhoptries
+rhoptry
+rhoptry lumen
+rhoptry lumens
+rhoptry membrane
+rhoptry membranes
+rhoptry neck
+rhoptry necks
+ribbon synapse
+ribbon synapses
+right anterior basal bodies
+right anterior basal body
+right anterior flagellum
+right anterior flagellums
+right caudal basal bodies
+right caudal basal body
+right caudal flagellum
+right caudal flagellums
+right lateral basal body pair
+right lateral basal body pairs
+right middle basal body pair
+right middle basal body pairs
+right nucleus
+right nucleuses
+right posteriolateral basal bodies
+right posteriolateral basal body
+right posteriolateral flagellum
+right posteriolateral flagellums
+right tetrad
+right tetrads
+right ventral basal bodies
+right ventral basal body
+right ventral flagellum
+right ventral flagellums
+rod spherule
+rod spherules
+root hair
+root hair tip
+root hair tips
+root hairs
+rough endoplasmic reticulum
+rough endoplasmic reticulum lumen
+rough endoplasmic reticulum lumens
+rough endoplasmic reticulum membrane
+rough endoplasmic reticulum membranes
+rough endoplasmic reticulums
+ruffle
+ruffle membrane
+ruffle membranes
+ruffles
+sarcolemma
+sarcolemmas
+sarcomere
+sarcomeres
+sarcoplasm
+sarcoplasmic reticulum
+sarcoplasmic reticulum lumen
+sarcoplasmic reticulum lumens
+sarcoplasmic reticulum membrane
+sarcoplasmic reticulum membranes
+sarcoplasmic reticulums
+sarcoplasms
+satellite fibril
+satellite fibrils
+scintillon
+scintillons
+sculpture element
+sculpture elements
+secondary cell septum
+secondary cell septums
+secondary cell wall
+secondary cell walls
+secondary lysosome
+secondary lysosomes
+secondary plasmodesma
+secondary plasmodesmas
+secretory granule
+secretory granule lumen
+secretory granule lumens
+secretory granule membrane
+secretory granule membranes
+secretory granules
+segmented viral genome
+segmented viral genomes
+senescence associated vacuole
+senescence associated vacuoles
+sensory dendrite
+sensory dendrites
+septal periplasm
+septal periplasms
+septate junction
+septate junctions
+septin band
+septin bands
+septin cap
+septin caps
+septin collar
+septin collars
+septin cytoskeleton
+septin cytoskeletons
+septin filament arraies
+septin filament array
+septin ring
+septin rings
+sex chromosome
+sex chromosomes
+sexine
+sexines
+sexual spore wall
+sexual spore walls
+side of membrane
+side of membranes
+sieve area
+sieve areas
+sieve plate
+sieve plates
+simple sieve plate
+simple sieve plates
+site of double-strand break
+site of double-strand breaks
+site of polarized growth
+site of polarized growths
+skein like inclusion
+skein like inclusions
+skeletal muscle myofibril
+skeletal muscle myofibrils
+slime layer
+slime layers
+slit diaphragm
+slit diaphragms
+smooth endoplasmic reticulum
+smooth endoplasmic reticulum lumen
+smooth endoplasmic reticulum lumens
+smooth endoplasmic reticulum membrane
+smooth endoplasmic reticulum membranes
+smooth endoplasmic reticulum part
+smooth endoplasmic reticulum parts
+smooth endoplasmic reticulums
+smooth muscle contractile fiber
+smooth muscle contractile fibers
+smooth muscle dense bodies
+smooth muscle dense body
+smooth septate junction
+smooth septate junctions
+somatic portion of tanycyte
+somatic portion of tanycytes
+somatic ring canal
+somatic ring canals
+somatic spine
+somatic spines
+somatodendritic compartment
+somatodendritic compartments
+sorting endosome
+sorting endosomes
+spanning component of membrane
+spanning component of membranes
+spanning component of plasma membrane
+spanning component of plasma membranes
+specific granule
+specific granule lumen
+specific granule lumens
+specific granule membrane
+specific granule membranes
+specific granules
+spectrin
+spectrin associated cytoskeleton
+spectrin associated cytoskeletons
+spectrins
+spectrosome
+spectrosomes
+sperm annulus
+sperm annuluses
+sperm connecting piece
+sperm connecting pieces
+sperm cytoplasmic droplet
+sperm cytoplasmic droplets
+sperm end piece
+sperm end pieces
+sperm fibrous sheath
+sperm fibrous sheaths
+sperm flagellum
+sperm flagellums
+sperm midpiece
+sperm midpieces
+sperm mitochondrial sheath
+sperm mitochondrial sheaths
+sperm part
+sperm parts
+sperm plasma membrane
+sperm plasma membranes
+sperm principal piece
+sperm principal pieces
+sphere organelle
+sphere organelles
+spherule viral factories
+spherule viral factory
+spindle
+spindle envelope
+spindle envelopes
+spindle matrix
+spindle matrixs
+spindle midzone
+spindle midzones
+spindle pole
+spindle pole bodies
+spindle pole body
+spindle pole centrosome
+spindle pole centrosomes
+spindle poles
+spindles
+spine apparatus
+spine apparatuses
+spine mat
+spine mats
+spiny bracelet of Nageotte
+spiny bracelet of Nageottes
+split septin rings
+split septin ringses
+spore wall
+spore walls
+sporoplasm
+sporoplasms
+spot adherens junction
+spot adherens junctions
+ssRNA viral genome
+ssRNA viral genomes
+starch grain
+starch grains
+stereocilia ankle link
+stereocilia ankle links
+stereocilia coupling link
+stereocilia coupling links
+stereocilia tip link
+stereocilia tip links
+stereocilia tip-link densities
+stereocilia tip-link density
+stereocilium
+stereocilium bundle
+stereocilium bundle tip
+stereocilium bundle tips
+stereocilium bundles
+stereocilium membrane
+stereocilium membranes
+stereociliums
+stigma papilla
+stigma papillas
+storage vacuole
+storage vacuoles
+stress fiber
+stress fibers
+striated muscle dense bodies
+striated muscle dense body
+striated muscle thin filament
+striated muscle thin filaments
+stromal side of plastid inner membrane
+stromal side of plastid inner membranes
+stromal side of plastid thylakoid membrane
+stromal side of plastid thylakoid membranes
+stromule
+stromules
+sub-surface cisterna
+sub-surface cisternas
+suberin network
+suberin networks
+sublamina densa
+sublamina densas
+subpellicular network
+subpellicular networks
+subplasmalemmal coating
+subplasmalemmal coatings
+subrhabdomeral cisterna
+subrhabdomeral cisternas
+subsynaptic reticulum
+subsynaptic reticulums
+surface coat of collagen and cuticulin based cuticle extracellular matrix
+surface coat of collagen and cuticulin based cuticle extracellular matrixs
+symbiont containing vacuolar membrane network
+symbiont containing vacuolar membrane networks
+symbiont containing vacuolar space
+symbiont containing vacuolar spaces
+symbiont containing vacuole
+symbiont containing vacuole membrane
+symbiont containing vacuole membranes
+symbiont containing vacuoles
+symbiosome
+symbiosomes
+symmetric synapse
+symmetric synapses
+symplast
+symplasts
+synapse
+synapse part
+synapse parts
+synapses
+synaptic cleft
+synaptic clefts
+synaptic membrane
+synaptic membranes
+synaptic vesicle
+synaptic vesicle , readily releasable pool
+synaptic vesicle , readily releasable pools
+synaptic vesicle , recycling pool
+synaptic vesicle , recycling pools
+synaptic vesicle , resting pool
+synaptic vesicle , resting pools
+synaptic vesicle lumen
+synaptic vesicle lumens
+synaptic vesicle membrane
+synaptic vesicle membranes
+synaptic vesicle protein transport vesicle
+synaptic vesicle protein transport vesicles
+synaptic vesicles
+synaptonemal complex
+synaptonemal complexs
+tail portion of tanycyte
+tail portion of tanycytes
+tectum
+tectums
+terminal bouton
+terminal boutons
+terminal cisterna
+terminal cisterna lumen
+terminal cisterna lumens
+terminal cisternas
+terminal loop
+terminal loops
+terminal web
+terminal webs
+tertiary granule
+tertiary granule membrane
+tertiary granule membranes
+tertiary granules
+tetraspanin enriched microdomain
+tetraspanin enriched microdomains
+thorny excrescence
+thorny excrescences
+thylakoid
+thylakoid lumen
+thylakoid lumens
+thylakoid membrane
+thylakoid membranes
+thylakoid part
+thylakoid parts
+thylakoids
+trans-Golgi network
+trans-Golgi network membrane
+trans-Golgi network membranes
+trans-Golgi network transport vesicle
+trans-Golgi network transport vesicle lumen
+trans-Golgi network transport vesicle lumens
+trans-Golgi network transport vesicle membrane
+trans-Golgi network transport vesicle membranes
+trans-Golgi network transport vesicles
+trans-Golgi networks
+transport vesicle
+transport vesicle lumen
+transport vesicle lumens
+transport vesicle membrane
+transport vesicle membranes
+transport vesicles
+transverse filament
+transverse filaments
+transverse flagellum
+transverse flagellums
+tricellular tight junction
+tricellular tight junctions
+trichocyst
+trichocysts
+tripartite viral genome
+tripartite viral genomes
+tube viral factories
+tube viral factory
+tubovesicular membrane network
+tubovesicular membrane networks
+tubular endosome
+tubular endosomes
+type I terminal bouton
+type I terminal boutons
+type II terminal bouton
+type II terminal boutons
+type III terminal bouton
+type III terminal boutons
+type IV pilus
+type IV piluses
+type Ib terminal bouton
+type Ib terminal boutons
+type Is terminal bouton
+type Is terminal boutons
+unencapsulated part of cell
+unencapsulated part of cells
+unicellular trichome apex
+unicellular trichome apexs
+unicellular trichome branch
+unicellular trichome branchs
+unicellular trichome tip
+unicellular trichome tips
+upper tip-link densities
+upper tip-link density
+uropod
+uropod membrane
+uropod membranes
+uropods
+vacuolar lumen
+vacuolar lumens
+vacuolar membrane
+vacuolar membranes
+vacuolar part
+vacuolar parts
+vacuole
+vacuoles
+varicosities
+varicosity
+ventral disc
+ventral disc crossbridge
+ventral disc crossbridges
+ventral disc dorsal microribbon
+ventral disc dorsal microribbons
+ventral disc lateral crest
+ventral disc lateral crests
+ventral disc microtubule arraies
+ventral disc microtubule array
+ventral disc overlap zone
+ventral disc overlap zones
+ventral disc supernumerary microtubule arraies
+ventral disc supernumerary microtubule array
+ventral discs
+vesicle
+vesicle lumen
+vesicle lumens
+vesicle membrane
+vesicle membranes
+vesicles
+viral assembly compartment
+viral assembly compartments
+viral assembly intermediate
+viral assembly intermediates
+viral capsid
+viral capsid , decoration
+viral capsid , decorations
+viral capsid , fiber
+viral capsid , fibers
+viral capsid , internal space
+viral capsid , internal spaces
+viral capsid , major subunit
+viral capsid , major subunits
+viral capsid , minor subunit
+viral capsid , minor subunits
+viral capsid , turret
+viral capsid , turrets
+viral capsids
+viral envelope
+viral envelopes
+viral factories
+viral factory
+viral genome
+viral genomes
+viral inner capsid
+viral inner capsids
+viral inner membrane
+viral inner membranes
+viral intermediate capsid
+viral intermediate capsids
+viral membrane
+viral membranes
+viral nucleocapsid
+viral nucleocapsids
+viral occlusion bodies
+viral occlusion body
+viral outer capsid
+viral outer capsids
+viral procapsid
+viral procapsids
+viral replication complex
+viral replication complexs
+viral tegument
+viral teguments
+virion
+virion membrane
+virion membranes
+virion nucleoid
+virion nucleoids
+virion part
+virion parts
+virion transport vesicle
+virion transport vesicles
+virions
+virogenic stroma
+virogenic stromas
+viroplasm viral factories
+viroplasm viral factory
+virus tail
+virus tail , baseplate
+virus tail , baseplates
+virus tail , fiber
+virus tail , fibers
+virus tail , major subunit
+virus tail , major subunits
+virus tail , minor subunit
+virus tail , minor subunits
+virus tail , shaft
+virus tail , shafts
+virus tail , sheath
+virus tail , sheaths
+virus tail , tip
+virus tail , tips
+virus tail , tube
+virus tail , tubes
+virus tails
+vitelline envelope
+vitelline envelopes
+xanthophore
+xanthophores
+yeast-form cell wall
+yeast-form cell walls
+yolk
+yolk granule
+yolk granules
+yolk plasma
+yolk plasmas
+yolks
+zonula adherens
+zonula adherenses
+zymogen granule
+zymogen granule membrane
+zymogen granule membranes
+zymogen granules
+integral to membrane
+trailing edge
